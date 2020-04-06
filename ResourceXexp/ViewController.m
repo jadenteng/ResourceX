@@ -9,9 +9,7 @@
 #import "ViewController.h"
 
 #import "Resource_X.h"
-
 #import "ResourceX+AFNetworking.h"
-//#import "ResourceX+YYModel.h"
 
 ///model 相关类
 #import "Episodes.h"

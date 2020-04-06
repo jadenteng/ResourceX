@@ -153,9 +153,9 @@
 				CB09E3E4243AE769006E19ED /* Resource_X.h */,
 				CB09E44E243AF11D006E19ED /* Headers */,
 				CB09E40F243AE838006E19ED /* ResourceX.m */,
-				CB09E413243AE839006E19ED /* NSMutableArray+Filters.m */,
 				CB09E414243AE839006E19ED /* ResourceConfig.m */,
 				CB09E452243AF259006E19ED /* ResourceX+YYModel.m */,
+				CB09E413243AE839006E19ED /* NSMutableArray+Filters.m */,
 				CB09E3E5243AE769006E19ED /* Info.plist */,
 			);
 			path = ResourceX;
@@ -164,12 +164,9 @@
 		CB09E3F1243AE7CD006E19ED /* ResourceXexp */ = {
 			isa = PBXGroup;
 			children = (
-				CB09E451243AF259006E19ED /* ResourceX+AFNetworking.h */,
-				CB09E450243AF259006E19ED /* ResourceX+AFNetworking.m */,
+				CB09E456243B3343006E19ED /* Common */,
 				CB09E43A243AECF9006E19ED /* AppDelegate+NetworkConfiguration.h */,
 				CB09E438243AECF9006E19ED /* AppDelegate+NetworkConfiguration.m */,
-				CB09E439243AECF9006E19ED /* MBProgressHUD+RxErrorHit.h */,
-				CB09E43B243AECF9006E19ED /* MBProgressHUD+RxErrorHit.m */,
 				CB09E42E243AECE9006E19ED /* Model */,
 				CB09E3F2243AE7CD006E19ED /* AppDelegate.h */,
 				CB09E3F3243AE7CD006E19ED /* AppDelegate.m */,
@@ -199,12 +196,12 @@
 		CB09E42E243AECE9006E19ED /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CB09E42F243AECE9006E19ED /* LoginModel.m */,
-				CB09E430243AECE9006E19ED /* PelistInfoModel.m */,
 				CB09E431243AECE9006E19ED /* Episodes.h */,
-				CB09E432243AECE9006E19ED /* LoginModel.h */,
 				CB09E433243AECE9006E19ED /* Episodes.m */,
+				CB09E432243AECE9006E19ED /* LoginModel.h */,
+				CB09E42F243AECE9006E19ED /* LoginModel.m */,
 				CB09E434243AECE9006E19ED /* PelistInfoModel.h */,
+				CB09E430243AECE9006E19ED /* PelistInfoModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,11 +210,22 @@
 			isa = PBXGroup;
 			children = (
 				CB09E410243AE838006E19ED /* ResourceX.h */,
-				CB09E411243AE839006E19ED /* NSMutableArray+Filters.h */,
 				CB09E412243AE839006E19ED /* ResourceConfig.h */,
 				CB09E44F243AF259006E19ED /* ResourceX+YYModel.h */,
+				CB09E411243AE839006E19ED /* NSMutableArray+Filters.h */,
 			);
 			path = Headers;
+			sourceTree = "<group>";
+		};
+		CB09E456243B3343006E19ED /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CB09E451243AF259006E19ED /* ResourceX+AFNetworking.h */,
+				CB09E450243AF259006E19ED /* ResourceX+AFNetworking.m */,
+				CB09E439243AECF9006E19ED /* MBProgressHUD+RxErrorHit.h */,
+				CB09E43B243AECF9006E19ED /* MBProgressHUD+RxErrorHit.m */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
