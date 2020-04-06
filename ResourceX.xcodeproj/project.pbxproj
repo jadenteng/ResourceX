@@ -8,38 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		CB09E3E6243AE769006E19ED /* Resource_X.h in Headers */ = {isa = PBXBuildFile; fileRef = CB09E3E4243AE769006E19ED /* Resource_X.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CB09E3F4243AE7CD006E19ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E3F3243AE7CD006E19ED /* AppDelegate.m */; };
-		CB09E3F7243AE7CD006E19ED /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E3F6243AE7CD006E19ED /* SceneDelegate.m */; };
-		CB09E3FA243AE7CD006E19ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E3F9243AE7CD006E19ED /* ViewController.m */; };
-		CB09E3FD243AE7CD006E19ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB09E3FB243AE7CD006E19ED /* Main.storyboard */; };
-		CB09E3FF243AE7D0006E19ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB09E3FE243AE7D0006E19ED /* Assets.xcassets */; };
-		CB09E402243AE7D0006E19ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB09E400243AE7D0006E19ED /* LaunchScreen.storyboard */; };
-		CB09E405243AE7D0006E19ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E404243AE7D0006E19ED /* main.m */; };
 		CB09E415243AE839006E19ED /* ResourceX.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E40F243AE838006E19ED /* ResourceX.m */; };
 		CB09E416243AE839006E19ED /* ResourceX.h in Headers */ = {isa = PBXBuildFile; fileRef = CB09E410243AE838006E19ED /* ResourceX.h */; };
 		CB09E417243AE839006E19ED /* NSMutableArray+Filters.h in Headers */ = {isa = PBXBuildFile; fileRef = CB09E411243AE839006E19ED /* NSMutableArray+Filters.h */; };
 		CB09E418243AE839006E19ED /* ResourceConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = CB09E412243AE839006E19ED /* ResourceConfig.h */; };
 		CB09E419243AE839006E19ED /* NSMutableArray+Filters.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E413243AE839006E19ED /* NSMutableArray+Filters.m */; };
 		CB09E41A243AE839006E19ED /* ResourceConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E414243AE839006E19ED /* ResourceConfig.m */; };
-		CB09E427243AECB7006E19ED /* YYModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E424243AECB7006E19ED /* YYModel.framework */; };
-		CB09E428243AECB7006E19ED /* YYModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E424243AECB7006E19ED /* YYModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CB09E429243AECB7006E19ED /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E425243AECB7006E19ED /* MBProgressHUD.framework */; };
-		CB09E42A243AECB7006E19ED /* MBProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E425243AECB7006E19ED /* MBProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CB09E42B243AECB7006E19ED /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E426243AECB7006E19ED /* AFNetworking.framework */; };
-		CB09E42C243AECB7006E19ED /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E426243AECB7006E19ED /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CB09E435243AECE9006E19ED /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E42F243AECE9006E19ED /* LoginModel.m */; };
-		CB09E436243AECE9006E19ED /* PelistInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E430243AECE9006E19ED /* PelistInfoModel.m */; };
-		CB09E437243AECE9006E19ED /* Episodes.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E433243AECE9006E19ED /* Episodes.m */; };
-		CB09E43C243AECF9006E19ED /* AppDelegate+NetworkConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E438243AECF9006E19ED /* AppDelegate+NetworkConfiguration.m */; };
-		CB09E43D243AECF9006E19ED /* MBProgressHUD+RxErrorHit.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E43B243AECF9006E19ED /* MBProgressHUD+RxErrorHit.m */; };
-		CB09E44A243AEFAC006E19ED /* ResourceX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E3E1243AE769006E19ED /* ResourceX.framework */; };
-		CB09E44B243AEFAC006E19ED /* ResourceX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E3E1243AE769006E19ED /* ResourceX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CB09E453243AF259006E19ED /* ResourceX+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E450243AF259006E19ED /* ResourceX+AFNetworking.m */; };
 		CB09E455243AF87C006E19ED /* ResourceX+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E452243AF259006E19ED /* ResourceX+YYModel.m */; };
+		CB09E4A5243B4D56006E19ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E4A4243B4D56006E19ED /* AppDelegate.m */; };
+		CB09E4A8243B4D56006E19ED /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E4A7243B4D56006E19ED /* SceneDelegate.m */; };
+		CB09E4AB243B4D56006E19ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E4AA243B4D56006E19ED /* ViewController.m */; };
+		CB09E4AE243B4D56006E19ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB09E4AC243B4D56006E19ED /* Main.storyboard */; };
+		CB09E4B0243B4D58006E19ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB09E4AF243B4D58006E19ED /* Assets.xcassets */; };
+		CB09E4B3243B4D58006E19ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB09E4B1243B4D58006E19ED /* LaunchScreen.storyboard */; };
+		CB09E4B6243B4D58006E19ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E4B5243B4D58006E19ED /* main.m */; };
+		CB09E4BB243B4D74006E19ED /* MBProgressHUD+RxErrorHit.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E43B243AECF9006E19ED /* MBProgressHUD+RxErrorHit.m */; };
+		CB09E4BC243B4D82006E19ED /* Episodes.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E433243AECE9006E19ED /* Episodes.m */; };
+		CB09E4BD243B4D84006E19ED /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E42F243AECE9006E19ED /* LoginModel.m */; };
+		CB09E4BE243B4D86006E19ED /* PelistInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E430243AECE9006E19ED /* PelistInfoModel.m */; };
+		CB09E4BF243B4D90006E19ED /* AppDelegate+NetworkConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E438243AECF9006E19ED /* AppDelegate+NetworkConfiguration.m */; };
+		CB09E4C1243B4E28006E19ED /* ResourceX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E3E1243AE769006E19ED /* ResourceX.framework */; };
+		CB09E4C2243B4E28006E19ED /* ResourceX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E3E1243AE769006E19ED /* ResourceX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CB09E4D4243B595E006E19ED /* YYModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D1243B595E006E19ED /* YYModel.framework */; };
+		CB09E4D5243B595E006E19ED /* YYModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D1243B595E006E19ED /* YYModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CB09E4D6243B595E006E19ED /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D2243B595E006E19ED /* AFNetworking.framework */; };
+		CB09E4D7243B595E006E19ED /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D2243B595E006E19ED /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CB09E4D8243B595E006E19ED /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D3243B595E006E19ED /* MBProgressHUD.framework */; };
+		CB09E4D9243B595E006E19ED /* MBProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D3243B595E006E19ED /* MBProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CB09E4DA243B59D5006E19ED /* ResourceX+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E450243AF259006E19ED /* ResourceX+AFNetworking.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CB09E44C243AEFAC006E19ED /* PBXContainerItemProxy */ = {
+		CB09E4C3243B4E28006E19ED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CB09E3D8243AE769006E19ED /* Project object */;
 			proxyType = 1;
@@ -49,16 +49,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CB09E42D243AECB7006E19ED /* Embed Frameworks */ = {
+		CB09E4C5243B4E28006E19ED /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CB09E42A243AECB7006E19ED /* MBProgressHUD.framework in Embed Frameworks */,
-				CB09E42C243AECB7006E19ED /* AFNetworking.framework in Embed Frameworks */,
-				CB09E428243AECB7006E19ED /* YYModel.framework in Embed Frameworks */,
-				CB09E44B243AEFAC006E19ED /* ResourceX.framework in Embed Frameworks */,
+				CB09E4D9243B595E006E19ED /* MBProgressHUD.framework in Embed Frameworks */,
+				CB09E4D5243B595E006E19ED /* YYModel.framework in Embed Frameworks */,
+				CB09E4D7243B595E006E19ED /* AFNetworking.framework in Embed Frameworks */,
+				CB09E4C2243B4E28006E19ED /* ResourceX.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,27 +69,12 @@
 		CB09E3E1243AE769006E19ED /* ResourceX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ResourceX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB09E3E4243AE769006E19ED /* Resource_X.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Resource_X.h; sourceTree = "<group>"; };
 		CB09E3E5243AE769006E19ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB09E3F0243AE7CD006E19ED /* ResourceXexp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResourceXexp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB09E3F2243AE7CD006E19ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		CB09E3F3243AE7CD006E19ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CB09E3F5243AE7CD006E19ED /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		CB09E3F6243AE7CD006E19ED /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		CB09E3F8243AE7CD006E19ED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CB09E3F9243AE7CD006E19ED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CB09E3FC243AE7CD006E19ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CB09E3FE243AE7D0006E19ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CB09E401243AE7D0006E19ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CB09E403243AE7D0006E19ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB09E404243AE7D0006E19ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CB09E40F243AE838006E19ED /* ResourceX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceX.m; sourceTree = "<group>"; };
 		CB09E410243AE838006E19ED /* ResourceX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceX.h; sourceTree = "<group>"; };
 		CB09E411243AE839006E19ED /* NSMutableArray+Filters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Filters.h"; sourceTree = "<group>"; };
 		CB09E412243AE839006E19ED /* ResourceConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceConfig.h; sourceTree = "<group>"; };
 		CB09E413243AE839006E19ED /* NSMutableArray+Filters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Filters.m"; sourceTree = "<group>"; };
 		CB09E414243AE839006E19ED /* ResourceConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceConfig.m; sourceTree = "<group>"; };
-		CB09E424243AECB7006E19ED /* YYModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YYModel.framework; path = ResourceXexp/YYModel.framework; sourceTree = "<group>"; };
-		CB09E425243AECB7006E19ED /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = ResourceXexp/MBProgressHUD.framework; sourceTree = "<group>"; };
-		CB09E426243AECB7006E19ED /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = ResourceXexp/AFNetworking.framework; sourceTree = "<group>"; };
 		CB09E42F243AECE9006E19ED /* LoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
 		CB09E430243AECE9006E19ED /* PelistInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PelistInfoModel.m; sourceTree = "<group>"; };
 		CB09E431243AECE9006E19ED /* Episodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Episodes.h; sourceTree = "<group>"; };
@@ -104,6 +89,21 @@
 		CB09E450243AF259006E19ED /* ResourceX+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ResourceX+AFNetworking.m"; sourceTree = "<group>"; };
 		CB09E451243AF259006E19ED /* ResourceX+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ResourceX+AFNetworking.h"; sourceTree = "<group>"; };
 		CB09E452243AF259006E19ED /* ResourceX+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ResourceX+YYModel.m"; sourceTree = "<group>"; };
+		CB09E4A1243B4D56006E19ED /* ResourceX_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResourceX_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB09E4A3243B4D56006E19ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CB09E4A4243B4D56006E19ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CB09E4A6243B4D56006E19ED /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		CB09E4A7243B4D56006E19ED /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		CB09E4A9243B4D56006E19ED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CB09E4AA243B4D56006E19ED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CB09E4AD243B4D56006E19ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CB09E4AF243B4D58006E19ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CB09E4B2243B4D58006E19ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CB09E4B4243B4D58006E19ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB09E4B5243B4D58006E19ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CB09E4D1243B595E006E19ED /* YYModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YYModel.framework; path = ResourceX_Example/YYModel.framework; sourceTree = "<group>"; };
+		CB09E4D2243B595E006E19ED /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = ResourceX_Example/AFNetworking.framework; sourceTree = "<group>"; };
+		CB09E4D3243B595E006E19ED /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = ResourceX_Example/MBProgressHUD.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,14 +114,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB09E3ED243AE7CD006E19ED /* Frameworks */ = {
+		CB09E49E243B4D56006E19ED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB09E429243AECB7006E19ED /* MBProgressHUD.framework in Frameworks */,
-				CB09E42B243AECB7006E19ED /* AFNetworking.framework in Frameworks */,
-				CB09E427243AECB7006E19ED /* YYModel.framework in Frameworks */,
-				CB09E44A243AEFAC006E19ED /* ResourceX.framework in Frameworks */,
+				CB09E4D8243B595E006E19ED /* MBProgressHUD.framework in Frameworks */,
+				CB09E4D4243B595E006E19ED /* YYModel.framework in Frameworks */,
+				CB09E4D6243B595E006E19ED /* AFNetworking.framework in Frameworks */,
+				CB09E4C1243B4E28006E19ED /* ResourceX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				CB09E3E3243AE769006E19ED /* ResourceX */,
-				CB09E3F1243AE7CD006E19ED /* ResourceXexp */,
+				CB09E4A2243B4D56006E19ED /* ResourceX_Example */,
 				CB09E3E2243AE769006E19ED /* Products */,
 				CB09E409243AE7E6006E19ED /* Frameworks */,
 			);
@@ -142,7 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				CB09E3E1243AE769006E19ED /* ResourceX.framework */,
-				CB09E3F0243AE7CD006E19ED /* ResourceXexp.app */,
+				CB09E4A1243B4D56006E19ED /* ResourceX_Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,6 +153,7 @@
 				CB09E3E4243AE769006E19ED /* Resource_X.h */,
 				CB09E44E243AF11D006E19ED /* Headers */,
 				CB09E40F243AE838006E19ED /* ResourceX.m */,
+				CB09E450243AF259006E19ED /* ResourceX+AFNetworking.m */,
 				CB09E414243AE839006E19ED /* ResourceConfig.m */,
 				CB09E452243AF259006E19ED /* ResourceX+YYModel.m */,
 				CB09E413243AE839006E19ED /* NSMutableArray+Filters.m */,
@@ -161,34 +162,12 @@
 			path = ResourceX;
 			sourceTree = "<group>";
 		};
-		CB09E3F1243AE7CD006E19ED /* ResourceXexp */ = {
-			isa = PBXGroup;
-			children = (
-				CB09E456243B3343006E19ED /* Common */,
-				CB09E43A243AECF9006E19ED /* AppDelegate+NetworkConfiguration.h */,
-				CB09E438243AECF9006E19ED /* AppDelegate+NetworkConfiguration.m */,
-				CB09E42E243AECE9006E19ED /* Model */,
-				CB09E3F2243AE7CD006E19ED /* AppDelegate.h */,
-				CB09E3F3243AE7CD006E19ED /* AppDelegate.m */,
-				CB09E3F5243AE7CD006E19ED /* SceneDelegate.h */,
-				CB09E3F6243AE7CD006E19ED /* SceneDelegate.m */,
-				CB09E3F8243AE7CD006E19ED /* ViewController.h */,
-				CB09E3F9243AE7CD006E19ED /* ViewController.m */,
-				CB09E3FB243AE7CD006E19ED /* Main.storyboard */,
-				CB09E3FE243AE7D0006E19ED /* Assets.xcassets */,
-				CB09E400243AE7D0006E19ED /* LaunchScreen.storyboard */,
-				CB09E403243AE7D0006E19ED /* Info.plist */,
-				CB09E404243AE7D0006E19ED /* main.m */,
-			);
-			path = ResourceXexp;
-			sourceTree = "<group>";
-		};
 		CB09E409243AE7E6006E19ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CB09E426243AECB7006E19ED /* AFNetworking.framework */,
-				CB09E425243AECB7006E19ED /* MBProgressHUD.framework */,
-				CB09E424243AECB7006E19ED /* YYModel.framework */,
+				CB09E4D2243B595E006E19ED /* AFNetworking.framework */,
+				CB09E4D3243B595E006E19ED /* MBProgressHUD.framework */,
+				CB09E4D1243B595E006E19ED /* YYModel.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -209,6 +188,7 @@
 		CB09E44E243AF11D006E19ED /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				CB09E451243AF259006E19ED /* ResourceX+AFNetworking.h */,
 				CB09E410243AE838006E19ED /* ResourceX.h */,
 				CB09E412243AE839006E19ED /* ResourceConfig.h */,
 				CB09E44F243AF259006E19ED /* ResourceX+YYModel.h */,
@@ -220,12 +200,32 @@
 		CB09E456243B3343006E19ED /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				CB09E451243AF259006E19ED /* ResourceX+AFNetworking.h */,
-				CB09E450243AF259006E19ED /* ResourceX+AFNetworking.m */,
 				CB09E439243AECF9006E19ED /* MBProgressHUD+RxErrorHit.h */,
 				CB09E43B243AECF9006E19ED /* MBProgressHUD+RxErrorHit.m */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		CB09E4A2243B4D56006E19ED /* ResourceX_Example */ = {
+			isa = PBXGroup;
+			children = (
+				CB09E42E243AECE9006E19ED /* Model */,
+				CB09E456243B3343006E19ED /* Common */,
+				CB09E4A3243B4D56006E19ED /* AppDelegate.h */,
+				CB09E4A4243B4D56006E19ED /* AppDelegate.m */,
+				CB09E43A243AECF9006E19ED /* AppDelegate+NetworkConfiguration.h */,
+				CB09E438243AECF9006E19ED /* AppDelegate+NetworkConfiguration.m */,
+				CB09E4A6243B4D56006E19ED /* SceneDelegate.h */,
+				CB09E4A7243B4D56006E19ED /* SceneDelegate.m */,
+				CB09E4A9243B4D56006E19ED /* ViewController.h */,
+				CB09E4AA243B4D56006E19ED /* ViewController.m */,
+				CB09E4AC243B4D56006E19ED /* Main.storyboard */,
+				CB09E4AF243B4D58006E19ED /* Assets.xcassets */,
+				CB09E4B1243B4D58006E19ED /* LaunchScreen.storyboard */,
+				CB09E4B4243B4D58006E19ED /* Info.plist */,
+				CB09E4B5243B4D58006E19ED /* main.m */,
+			);
+			path = ResourceX_Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,23 +263,23 @@
 			productReference = CB09E3E1243AE769006E19ED /* ResourceX.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CB09E3EF243AE7CD006E19ED /* ResourceXexp */ = {
+		CB09E4A0243B4D56006E19ED /* ResourceX_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CB09E406243AE7D0006E19ED /* Build configuration list for PBXNativeTarget "ResourceXexp" */;
+			buildConfigurationList = CB09E4B7243B4D58006E19ED /* Build configuration list for PBXNativeTarget "ResourceX_Example" */;
 			buildPhases = (
-				CB09E3EC243AE7CD006E19ED /* Sources */,
-				CB09E3ED243AE7CD006E19ED /* Frameworks */,
-				CB09E3EE243AE7CD006E19ED /* Resources */,
-				CB09E42D243AECB7006E19ED /* Embed Frameworks */,
+				CB09E49D243B4D56006E19ED /* Sources */,
+				CB09E49E243B4D56006E19ED /* Frameworks */,
+				CB09E49F243B4D56006E19ED /* Resources */,
+				CB09E4C5243B4E28006E19ED /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CB09E44D243AEFAC006E19ED /* PBXTargetDependency */,
+				CB09E4C4243B4E28006E19ED /* PBXTargetDependency */,
 			);
-			name = ResourceXexp;
-			productName = ResourceXexp;
-			productReference = CB09E3F0243AE7CD006E19ED /* ResourceXexp.app */;
+			name = ResourceX_Example;
+			productName = ResourceX_Example;
+			productReference = CB09E4A1243B4D56006E19ED /* ResourceX_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -294,7 +294,7 @@
 					CB09E3E0243AE769006E19ED = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
-					CB09E3EF243AE7CD006E19ED = {
+					CB09E4A0243B4D56006E19ED = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
 				};
@@ -313,7 +313,7 @@
 			projectRoot = "";
 			targets = (
 				CB09E3E0243AE769006E19ED /* ResourceX */,
-				CB09E3EF243AE7CD006E19ED /* ResourceXexp */,
+				CB09E4A0243B4D56006E19ED /* ResourceX_Example */,
 			);
 		};
 /* End PBXProject section */
@@ -326,13 +326,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB09E3EE243AE7CD006E19ED /* Resources */ = {
+		CB09E49F243B4D56006E19ED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB09E402243AE7D0006E19ED /* LaunchScreen.storyboard in Resources */,
-				CB09E3FF243AE7D0006E19ED /* Assets.xcassets in Resources */,
-				CB09E3FD243AE7CD006E19ED /* Main.storyboard in Resources */,
+				CB09E4B3243B4D58006E19ED /* LaunchScreen.storyboard in Resources */,
+				CB09E4B0243B4D58006E19ED /* Assets.xcassets in Resources */,
+				CB09E4AE243B4D56006E19ED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,51 +345,51 @@
 			files = (
 				CB09E455243AF87C006E19ED /* ResourceX+YYModel.m in Sources */,
 				CB09E415243AE839006E19ED /* ResourceX.m in Sources */,
+				CB09E4DA243B59D5006E19ED /* ResourceX+AFNetworking.m in Sources */,
 				CB09E41A243AE839006E19ED /* ResourceConfig.m in Sources */,
 				CB09E419243AE839006E19ED /* NSMutableArray+Filters.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB09E3EC243AE7CD006E19ED /* Sources */ = {
+		CB09E49D243B4D56006E19ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB09E3FA243AE7CD006E19ED /* ViewController.m in Sources */,
-				CB09E3F4243AE7CD006E19ED /* AppDelegate.m in Sources */,
-				CB09E405243AE7D0006E19ED /* main.m in Sources */,
-				CB09E3F7243AE7CD006E19ED /* SceneDelegate.m in Sources */,
-				CB09E436243AECE9006E19ED /* PelistInfoModel.m in Sources */,
-				CB09E43D243AECF9006E19ED /* MBProgressHUD+RxErrorHit.m in Sources */,
-				CB09E437243AECE9006E19ED /* Episodes.m in Sources */,
-				CB09E453243AF259006E19ED /* ResourceX+AFNetworking.m in Sources */,
-				CB09E43C243AECF9006E19ED /* AppDelegate+NetworkConfiguration.m in Sources */,
-				CB09E435243AECE9006E19ED /* LoginModel.m in Sources */,
+				CB09E4AB243B4D56006E19ED /* ViewController.m in Sources */,
+				CB09E4BD243B4D84006E19ED /* LoginModel.m in Sources */,
+				CB09E4A5243B4D56006E19ED /* AppDelegate.m in Sources */,
+				CB09E4BB243B4D74006E19ED /* MBProgressHUD+RxErrorHit.m in Sources */,
+				CB09E4B6243B4D58006E19ED /* main.m in Sources */,
+				CB09E4BF243B4D90006E19ED /* AppDelegate+NetworkConfiguration.m in Sources */,
+				CB09E4BC243B4D82006E19ED /* Episodes.m in Sources */,
+				CB09E4BE243B4D86006E19ED /* PelistInfoModel.m in Sources */,
+				CB09E4A8243B4D56006E19ED /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CB09E44D243AEFAC006E19ED /* PBXTargetDependency */ = {
+		CB09E4C4243B4E28006E19ED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CB09E3E0243AE769006E19ED /* ResourceX */;
-			targetProxy = CB09E44C243AEFAC006E19ED /* PBXContainerItemProxy */;
+			targetProxy = CB09E4C3243B4E28006E19ED /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CB09E3FB243AE7CD006E19ED /* Main.storyboard */ = {
+		CB09E4AC243B4D56006E19ED /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CB09E3FC243AE7CD006E19ED /* Base */,
+				CB09E4AD243B4D56006E19ED /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		CB09E400243AE7D0006E19ED /* LaunchScreen.storyboard */ = {
+		CB09E4B1243B4D58006E19ED /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CB09E401243AE7D0006E19ED /* Base */,
+				CB09E4B2243B4D58006E19ED /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -522,6 +522,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ResourceX_Example",
+				);
 				INFOPLIST_FILE = ResourceX/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -529,6 +533,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Teng.ResourceX;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -546,6 +551,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ResourceX_Example",
+				);
 				INFOPLIST_FILE = ResourceX/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -553,6 +562,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Teng.ResourceX;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -561,7 +571,7 @@
 			};
 			name = Release;
 		};
-		CB09E407243AE7D0006E19ED /* Debug */ = {
+		CB09E4B8243B4D58006E19ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -569,20 +579,20 @@
 				DEVELOPMENT_TEAM = FFX6ABGTP4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/ResourceXexp",
+					"$(PROJECT_DIR)/ResourceX_Example",
 				);
-				INFOPLIST_FILE = ResourceXexp/Info.plist;
+				INFOPLIST_FILE = ResourceX_Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Teng.ResourceXexp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Teng.ResourceX-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		CB09E408243AE7D0006E19ED /* Release */ = {
+		CB09E4B9243B4D58006E19ED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -590,14 +600,14 @@
 				DEVELOPMENT_TEAM = FFX6ABGTP4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/ResourceXexp",
+					"$(PROJECT_DIR)/ResourceX_Example",
 				);
-				INFOPLIST_FILE = ResourceXexp/Info.plist;
+				INFOPLIST_FILE = ResourceX_Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Teng.ResourceXexp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Teng.ResourceX-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -624,11 +634,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CB09E406243AE7D0006E19ED /* Build configuration list for PBXNativeTarget "ResourceXexp" */ = {
+		CB09E4B7243B4D58006E19ED /* Build configuration list for PBXNativeTarget "ResourceX_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CB09E407243AE7D0006E19ED /* Debug */,
-				CB09E408243AE7D0006E19ED /* Release */,
+				CB09E4B8243B4D58006E19ED /* Debug */,
+				CB09E4B9243B4D58006E19ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

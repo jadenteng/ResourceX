@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CB09E3EF243AE7CD006E19ED"
-               BuildableName = "ResourceXexp.app"
-               BlueprintName = "ResourceXexp"
+               BlueprintIdentifier = "CB09E4A0243B4D56006E19ED"
+               BuildableName = "ResourceX_Example.app"
+               BlueprintName = "ResourceX_Example"
                ReferencedContainer = "container:ResourceX.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,9 +44,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CB09E3EF243AE7CD006E19ED"
-            BuildableName = "ResourceXexp.app"
-            BlueprintName = "ResourceXexp"
+            BlueprintIdentifier = "CB09E4A0243B4D56006E19ED"
+            BuildableName = "ResourceX_Example.app"
+            BlueprintName = "ResourceX_Example"
             ReferencedContainer = "container:ResourceX.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,9 +61,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CB09E3EF243AE7CD006E19ED"
-            BuildableName = "ResourceXexp.app"
-            BlueprintName = "ResourceXexp"
+            BlueprintIdentifier = "CB09E4A0243B4D56006E19ED"
+            BuildableName = "ResourceX_Example.app"
+            BlueprintName = "ResourceX_Example"
             ReferencedContainer = "container:ResourceX.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

@@ -1,0 +1,18 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "b7c794d47c0c5ef21460df7aa236a3590af91ac1",
+  "iOS" : [
+    {
+      "name" : "ResourceX",
+      "hash" : "0704904c0732d6aafd9f7ff34982625f564fdf619772a243d308ad64e6c2c943"
+    }
+  ]
+}
