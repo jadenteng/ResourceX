@@ -1,6 +1,0 @@
-framework module ResourceX {
-  umbrella header "ResourceX.h"
-
-  export *
-  module * { export * }
-}
