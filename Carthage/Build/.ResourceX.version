@@ -1,18 +1,9 @@
 {
-  "Mac" : [
-
-  ],
-  "watchOS" : [
-
-  ],
-  "tvOS" : [
-
-  ],
-  "commitish" : "1.0",
+  "commitish" : "761955aa1edbd6502b29108670de117c7dc837e1",
   "iOS" : [
     {
       "name" : "ResourceX",
-      "hash" : "af971526fb05f8fd57112ba472ba3f1ac164bc34812a3075e95fb131b569b3ea"
+      "hash" : "e22919f8bf25a52108ee39a7c4d2ac9004aa5cedf4b16c77bd8f14cf32d2dfb3"
     }
   ]
 }
