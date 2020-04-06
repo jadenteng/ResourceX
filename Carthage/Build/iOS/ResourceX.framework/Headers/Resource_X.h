@@ -8,7 +8,7 @@
 
 #import "ResourceX.h"
 #import "ResourceX+YYModel.h"
-#import "ResourceX+AFNetworking.h"
+//#import "ResourceX+AFNetworking.h"
 
 FOUNDATION_EXPORT double ResourceXVersionNumber;
 
