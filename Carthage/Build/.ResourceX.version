@@ -8,11 +8,11 @@
   "tvOS" : [
 
   ],
-  "commitish" : "b7c794d47c0c5ef21460df7aa236a3590af91ac1",
+  "commitish" : "9a63ef642dd771dbfc330fd8314aff7e3eb1c3b7",
   "iOS" : [
     {
       "name" : "ResourceX",
-      "hash" : "0704904c0732d6aafd9f7ff34982625f564fdf619772a243d308ad64e6c2c943"
+      "hash" : "9cdb8e1d879b50f1b775f038f9d9513f978bf7c871d662b7c49f36fbaf7fca60"
     }
   ]
 }
