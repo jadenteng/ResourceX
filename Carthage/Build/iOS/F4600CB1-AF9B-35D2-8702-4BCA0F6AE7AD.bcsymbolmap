@@ -1,0 +1,174 @@
+BCSymbolMap Version: 2.0
++[ResourceX(YYModel) url:]
++[ResourceX(YYModel) jsonUrl:]
++[ResourceX(YYModel) jsonUrl:by:]
++[ResourceX(YYModel) yy_url:decoder:]
++[ResourceX(YYModel) yy_url:decoder:by:]
++[ResourceX(YYModel) yy_array_url:decoder:]
++[ResourceX(YYModel) yy_array_url:decoder:by:]
++[ResourceX(YYModel) yy_mutableArray_url:decoder:]
++[ResourceX(YYModel) yy_mutableArray_url:decoder:by:]
+-[ResourceX(YYModel) init]
+___26-[ResourceX(YYModel) init]_block_invoke
+-[ResourceX(YYModel) initJsonUrl:]
+___34-[ResourceX(YYModel) initJsonUrl:]_block_invoke
+-[ResourceX(YYModel) initJsonUrl:by:]
+___37-[ResourceX(YYModel) initJsonUrl:by:]_block_invoke
+___copy_helper_block_e8_32s
+___destroy_helper_block_e8_32s
+-[ResourceX(YYModel) initJsonModel:decoder:]
+___44-[ResourceX(YYModel) initJsonModel:decoder:]_block_invoke
+-[ResourceX(YYModel) initJsonModel:decoder:by:]
+___47-[ResourceX(YYModel) initJsonModel:decoder:by:]_block_invoke
+-[ResourceX(YYModel) initArrayJsonModel:decoder:]
+___49-[ResourceX(YYModel) initArrayJsonModel:decoder:]_block_invoke
+-[ResourceX(YYModel) initArrayJsonModel:decoder:by:]
+___52-[ResourceX(YYModel) initArrayJsonModel:decoder:by:]_block_invoke
+-[ResourceX(YYModel) initMutableArrayJsonModel:decoder:by:]
+___59-[ResourceX(YYModel) initMutableArrayJsonModel:decoder:by:]_block_invoke
+-[ResourceX(YYModel) initMutableArrayJsonModel:decoder:]
+___56-[ResourceX(YYModel) initMutableArrayJsonModel:decoder:]_block_invoke
++[ResourceX(YYModel) reduxdeData:coderClass:]
++[ResourceX(YYModel) array_reduxdeData:coderClass:]
++[ResourceX(YYModel) mutableArray_reduxdeData:coderClass:]
+___block_descriptor_32_e8_16?08l
+___block_literal_global
+___block_literal_global.25
+___block_descriptor_40_e8_32s_e8_16?08l
+___block_descriptor_40_e8_16?08lu32l8
+___block_descriptor_48_e8_32s_e8_16?08lu40l8
+Apple clang version 11.0.0 (clang-1100.0.33.17)
+/Users/dengqiang/Desktop/swiftUI/Rx/ResourceX/ResourceX/ResourceX+YYModel.m
+/Users/dengqiang/Desktop/swiftUI/Rx/ResourceX
+ResourceX/ResourceX+YYModel.m
+__56-[ResourceX(YYModel) initMutableArrayJsonModel:decoder:]_block_invoke
+__59-[ResourceX(YYModel) initMutableArrayJsonModel:decoder:by:]_block_invoke
+__52-[ResourceX(YYModel) initArrayJsonModel:decoder:by:]_block_invoke
+__49-[ResourceX(YYModel) initArrayJsonModel:decoder:]_block_invoke
+__47-[ResourceX(YYModel) initJsonModel:decoder:by:]_block_invoke
+__44-[ResourceX(YYModel) initJsonModel:decoder:]_block_invoke
+__destroy_helper_block_e8_32s
+__copy_helper_block_e8_32s
+__37-[ResourceX(YYModel) initJsonUrl:by:]_block_invoke
+__34-[ResourceX(YYModel) initJsonUrl:]_block_invoke
+__26-[ResourceX(YYModel) init]_block_invoke
+-[ResourceX url]
+-[ResourceX basekApiServer]
++[ResourceX reduxData:]
+-[ResourceX timeoutInterval]
+-[ResourceX callbackSuccess:failure:finished:]
+-[ResourceX callbackUploadProgress:]
+-[ResourceX cancelOperation]
+-[ResourceX parseResponse:]
+-[ResourceX setBasekApiServer:]
+-[ResourceX setUrl:]
+-[ResourceX setTimeoutInterval:]
+-[ResourceX isHiddenErrorHit]
+-[ResourceX setIsHiddenErrorHit:]
+-[ResourceX isNone_HUD_animated]
+-[ResourceX setIsNone_HUD_animated:]
+-[ResourceX parser]
+-[ResourceX setParser:]
+-[ResourceX success]
+-[ResourceX setSuccess:]
+-[ResourceX failure]
+-[ResourceX setFailure:]
+-[ResourceX finishedCallBack]
+-[ResourceX setFinishedCallBack:]
+-[ResourceX uploadProgressCallBack]
+-[ResourceX setUploadProgressCallBack:]
+-[ResourceX cachePolicy]
+-[ResourceX setCachePolicy:]
+-[ResourceX urlCacheKey]
+-[ResourceX setUrlCacheKey:]
+-[ResourceX .cxx_destruct]
++[ResourceX(Common) joinURL:parameters:]
++[ResourceX(Common) urlEncodedString:]
+-[ResourceX(Common) GET]
+___24-[ResourceX(Common) GET]_block_invoke
++[ResourceX(ImageData) base64:]
++[ResourceX(ImageData) createUUID]
++[ResourceX(ImageData) scaleDataImage:toKb:]
+_OBJC_IVAR_$_ResourceX._isHiddenErrorHit
+_OBJC_IVAR_$_ResourceX._isNone_HUD_animated
+_OBJC_IVAR_$_ResourceX._basekApiServer
+_OBJC_IVAR_$_ResourceX._url
+_OBJC_IVAR_$_ResourceX._timeoutInterval
+_OBJC_IVAR_$_ResourceX._parser
+_OBJC_IVAR_$_ResourceX._success
+_OBJC_IVAR_$_ResourceX._failure
+_OBJC_IVAR_$_ResourceX._finishedCallBack
+_OBJC_IVAR_$_ResourceX._uploadProgressCallBack
+_OBJC_IVAR_$_ResourceX._cachePolicy
+_OBJC_IVAR_$_ResourceX._urlCacheKey
+___block_descriptor_40_e8_32s_e46_v32?0"NSData"8"NSURLResponse"16"NSError"24l
+/Users/dengqiang/Desktop/swiftUI/Rx/ResourceX/ResourceX/ResourceX.m
+ResourceX/ResourceX.m
+__24-[ResourceX(Common) GET]_block_invoke
+ResourceX/Headers/ResourceX.h
++[ResourceConfig share]
+___23+[ResourceConfig share]_block_invoke
++[ResourceConfig setReduxdata_Key:]
++[ResourceConfig setReduxdata_Msg:]
++[ResourceConfig setReduxdata_Code:]
++[ResourceConfig setReduxdatCode_succes_State:]
++[ResourceConfig setBasek_Api_Server:]
++[ResourceConfig showErrorHit:]
++[ResourceConfig hideHUDFinish:]
++[ResourceConfig showHUDbegin:]
+-[ResourceConfig netWorkErrorHit]
+-[ResourceConfig setNetWorkErrorHit:]
+-[ResourceConfig finishedHidenHUD_block]
+-[ResourceConfig setFinishedHidenHUD_block:]
+-[ResourceConfig startShowHUD_block]
+-[ResourceConfig setStartShowHUD_block:]
+-[ResourceConfig .cxx_destruct]
+_shareinstance
+_share.onceToken
+___block_descriptor_32_e5_v8?0l
+_OBJC_IVAR_$_ResourceConfig._netWorkErrorHit
+_OBJC_IVAR_$_ResourceConfig._finishedHidenHUD_block
+_OBJC_IVAR_$_ResourceConfig._startShowHUD_block
+/Users/dengqiang/Desktop/swiftUI/Rx/ResourceX/ResourceX/ResourceConfig.m
+ResourceX/ResourceConfig.m
+ResourceX/Headers/ResourceConfig.h
+__23+[ResourceConfig share]_block_invoke
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/include/dispatch/once.h
+-[NSMutableArray(Filters) map:]
+___31-[NSMutableArray(Filters) map:]_block_invoke
+___copy_helper_block_e8_32s40b
+___destroy_helper_block_e8_32s40s
+-[NSMutableArray(Filters) filter:]
+___34-[NSMutableArray(Filters) filter:]_block_invoke
+___copy_helper_block_e8_32b40s
+-[NSMutableArray(Filters) forEach:]
+___35-[NSMutableArray(Filters) forEach:]_block_invoke
+___copy_helper_block_e8_32b
+-[NSMutableArray(Filters) forEachIndex:]
+___40-[NSMutableArray(Filters) forEachIndex:]_block_invoke
+-[NSArray(Filters) map:]
+___24-[NSArray(Filters) map:]_block_invoke
+-[NSArray(Filters) filter:]
+___27-[NSArray(Filters) filter:]_block_invoke
+-[NSArray(Filters) forEach:]
+___28-[NSArray(Filters) forEach:]_block_invoke
+-[NSArray(Filters) forEachIndex:]
+___33-[NSArray(Filters) forEachIndex:]_block_invoke
+___block_descriptor_48_e8_32s40bs_e15_v32?08Q16^B24l
+___block_descriptor_48_e8_32bs40s_e15_v32?08Q16^B24l
+___block_descriptor_40_e8_32bs_e15_v32?08Q16^B24l
+/Users/dengqiang/Desktop/swiftUI/Rx/ResourceX/ResourceX/NSMutableArray+Filters.m
+__33-[NSArray(Filters) forEachIndex:]_block_invoke
+ResourceX/NSMutableArray+Filters.m
+__28-[NSArray(Filters) forEach:]_block_invoke
+__27-[NSArray(Filters) filter:]_block_invoke
+__24-[NSArray(Filters) map:]_block_invoke
+__40-[NSMutableArray(Filters) forEachIndex:]_block_invoke
+__copy_helper_block_e8_32b
+__35-[NSMutableArray(Filters) forEach:]_block_invoke
+__copy_helper_block_e8_32b40s
+__34-[NSMutableArray(Filters) filter:]_block_invoke
+__destroy_helper_block_e8_32s40s
+__copy_helper_block_e8_32s40b
+__31-[NSMutableArray(Filters) map:]_block_invoke
+/Users/dengqiang/Library/Developer/Xcode/DerivedData/ResourceX-dotomvnlwhcmvueqznntiwkndtgn/Build/Intermediates.noindex/ArchiveIntermediates/ResourceX/IntermediateBuildFilesPath/ResourceX.build/Release-iphoneos/ResourceX.build/DerivedSources/ResourceX_vers.c
