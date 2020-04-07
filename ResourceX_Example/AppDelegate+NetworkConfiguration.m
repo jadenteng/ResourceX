@@ -61,17 +61,17 @@
     
     //配置主api
     [ResourceConfig setBasek_Api_Server:@"http://mock-api.com/bKkO5MKB.mock"];
-
-//    [ResourceConfig configerAFHTTPSessionManager: ^AFHTTPSessionManager *{
-//
-//        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-//        manager.requestSerializer = [AFJSONRequestSerializer serializer];
-//        manager.responseSerializer = [AFJSONResponseSerializer serializer];
-//        manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json",@"multipart/form-data", @"text/javascript",@"text/html",@"text/css",@"text/xml",@"text/plain", @"application/javascript", @"image/*", nil];
-//        [manager.requestSerializer setValue:@"application/json; charset=utf-8;" forHTTPHeaderField:@"Content-Type"];
-//
-//        return manager;
-//    }];
+    
+    [ResourceConfig configerAFHTTPSessionManager: ^AFHTTPSessionManager *{
+        
+        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+        manager.requestSerializer = [AFJSONRequestSerializer serializer];
+        manager.responseSerializer = [AFJSONResponseSerializer serializer];
+        manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json",@"multipart/form-data", @"text/javascript",@"text/html",@"text/css",@"text/xml",@"text/plain", @"application/javascript", @"image/*", nil];
+        [manager.requestSerializer setValue:@"application/json; charset=utf-8;" forHTTPHeaderField:@"Content-Type"];
+        
+        return manager;
+    }];
     
     //配置AF sessionHeaders *服务器header需要的参数设置
     [ResourceConfig configerSessionHeader:^ NSDictionary * (NSString *url,id _Nullable parmas){
@@ -92,7 +92,7 @@
         };
         // NSLog(@"%@\n%@",url,afHeaders);
         return afHeaders;
-    }];    
+    }];
 }
 
 
