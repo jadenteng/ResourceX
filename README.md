@@ -1,5 +1,7 @@
 # ResourceX
 ResourceX 通过AFNetworking、YYModel 解析   网络类封装
+致力于对网络请求的简化,实现灵活可变的网络请求类
+
 
 ## 提示：提issue前，请先对照Demo、常见问题自查！Demo 在ResourceX_Example目录。
 使用此类需要自行添加 AFNetworking、YYModel
