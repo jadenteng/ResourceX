@@ -50,7 +50,7 @@ ResourceX *netApi = [ResourceX yy_array_url:@"episodes" decoder:Episodes.class b
 
 ### 二. Example 例子
 
-#### 列:服务器返回格式
+#### 服务器返回格式如
 ```
 {
    "code": "0",
