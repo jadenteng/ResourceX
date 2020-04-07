@@ -10,11 +10,11 @@
 这样的流程不仅每次获取到服务器数据后都会有大量的逻辑去处理服务器返回的JSON
 于是，这部分功能很容易写出复杂臃肿的函数或者逻辑，但仔细看看却又觉得没什么更好的办法。这种函数不仅看上去不美观，也难以进行单元测试
 
-## 一. 通过泛型编程简化网络请求 
+## 一. ___通过泛型编程简化网络请求___
 
 通过泛型编程，把请求中的这三个过程真正抽象出来，以达到进一步解耦网络请求和业务逻辑代码的目的。
 
-#### 创建ResourceX 设置转换Model 去掉了获取复杂的获取json中逻辑,也去掉了json转为对应的model时处理逻辑
+#### *创建ResourceX 设置转换Model 去掉了获取复杂的获取json中逻辑,也去掉了json转为对应的model时处理逻辑*
 ```
 //1. 创建ResourceX by通过key获取 数组Episodes对象
 ResourceX *netApi = [ResourceX yy_array_url:@"episodes" decoder:Episodes.class by:@"episodes"];
@@ -100,7 +100,7 @@ if (tag == 1) {
 [MBProgressHUD hideHUD_animated:YES];
 }];
 ```
-## 二. 简单实现OC版 map filter forEach (仅提供思路) 
+## 二. ___简单实现OC版 map filter forEach___ (仅提供思路) 
 提供工具类NSMutableArray+Filters.m文件
 
 在学习Swift中，函数式编程中集合类都有一个重要的思想：通过closure来参数化对序列的操作行为 如:map filter forEach reduce
