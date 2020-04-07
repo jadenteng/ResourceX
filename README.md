@@ -23,15 +23,15 @@ ResourceX *netApi = [ResourceX yy_array_url:@"episodes" decoder:Episodes.class b
 [netApi GET_AF:@{}];
 
 //3. 获取responseObject对象  responseObject为转换为Episodes的数组对象类型
- netApi.success = ^(id  _Nullable responseObject) {
-        NSLog(@"转换数据:%@",responseObject);
-     };
-     
+netApi.success = ^(id  _Nullable responseObject) {
+NSLog(@"转换数据:%@",responseObject);
+};
+
 // 将发生错误的逻辑剥离出来, failure block只会在请求失败调用
- netApi.failure = ^(id  _Nullable responseObject) {
-        NSLog(@"数据错误:%@",responseObject);
-   };
- ```
+netApi.failure = ^(id  _Nullable responseObject) {
+NSLog(@"数据错误:%@",responseObject);
+};
+```
 提issue前，请先对照Demo、常见问题自查！Demo 在ResourceX_Example目录 打开ResourceX.xcodeproj 选择ResourceX_Example工程
 使用此ResourceX需要自行添加 AFNetworking、YYModel
 配置相关放在 AppDelegate+NetworkConfiguration.m具体可查看 demo
@@ -53,13 +53,13 @@ ResourceX *netApi = [ResourceX yy_array_url:@"episodes" decoder:Episodes.class b
 #### 服务器返回格式如
 ```
 {
-   "code": "0",
-   "result": {
-              "name": 1,
-              "email": "datas",
-              "mobile": "datas"
-             },
-    "msg": "sucess!"
+  "code": "0",
+  "result": {
+          "name": 1,
+          "email": "datas",
+          "mobile": "datas"
+           },
+  "msg": "sucess!"
 }
 
 ```
@@ -78,6 +78,17 @@ ResourceX *netApi = [ResourceX yy_array_url:@"episodes" decoder:Episodes.class b
 [ResourceConfig configerAFHTTPSessionManager: ^AFHTTPSessionManager *{}];
 //配置AF sessionHeaders *服务器header需要的参数设置
 [ResourceConfig configerSessionHeader:^ NSDictionary * (NSString *url,id _Nullable parmas){}];
+```
+#### 发起请求
+```
+//1 配置接口 decoder解码对象 LoginModel
+ResourceX *netApi = [ResourceX jsonUrl:@"exmple/loginModel" decoder:LoginModel.class];
+//2 发送请求方式GET POST
+[netApi GET_AF:nil];
+//3 获取返回LoginModel对象
+netApi.success = ^(id  _Nullable responseObject) {
+     NSLog(@"转换数据:%@",responseObject);
+};
 ```
 ####  可选HUD配置
 ``` //配置获取网络失败 提示HUD 可自定义实现 HUD
@@ -109,21 +120,21 @@ if (tag == 1) {
 一个OC中常用的遍历方法
 ```
 /// 将一个数组中的数字 转换为一个 NSString 的数组
- // 1 创建一个数组
- NSMutableArray *strsList = [NSMutableArray array];
- NSArray *list = @[@1,@2,@3,@4];
- // 2 遍历需要转换的数组
- for (NSNumber *num in list) {
-     //3 添加到转换NSString的数组
-     [strsList addObject:[NSString stringWithFormat:@"%@",num]];
- }
+// 1 创建一个数组
+NSMutableArray *strsList = [NSMutableArray array];
+NSArray *list = @[@1,@2,@3,@4];
+// 2 遍历需要转换的数组
+for (NSNumber *num in list) {
+//3 添加到转换NSString的数组
+[strsList addObject:[NSString stringWithFormat:@"%@",num]];
+}
 ```
 虽然这个遍历不难理解，但是，想象一下这段代码在几十行代码中间的时候，或者当这样类似的逻辑反复出现的时候，整体代码的可读性就不那么强了。
 
 #### 使用map
 ```
 NSMutableArray *strsList_map = [@[@1,@2,@3,@4] map:^id (id num) {
-        return [NSString stringWithFormat:@"%@",num];}];
+return [NSString stringWithFormat:@"%@",num];}];
 ```
 上面这行代码，和之前那段for循环执行的结果是相同的。显然，它比for循环更具表现力，并且也能把我们期望的结果定义成对象。当然，map并不是什么魔法，无非就是把for循环执行的逻辑，封装在了函数里，这样我们就可以把函数的返回值赋值给常量了
 
