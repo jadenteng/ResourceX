@@ -32,8 +32,7 @@ ResourceX *netApi = [ResourceX yy_array_url:@"episodes" decoder:Episodes.class b
         NSLog(@"数据错误:%@",responseObject);
    };
  ```
-### 提issue前，请先对照Demo、常见问题自查！Demo 在ResourceX_Example目录 打开ResourceX.xcodeproj 选择ResourceX_Example工程。
-
+提issue前，请先对照Demo、常见问题自查！Demo 在ResourceX_Example目录 打开ResourceX.xcodeproj 选择ResourceX_Example工程
 使用此ResourceX需要自行添加 AFNetworking、YYModel
 配置相关放在 AppDelegate+NetworkConfiguration.m具体可查看 demo
 
