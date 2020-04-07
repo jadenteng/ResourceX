@@ -116,7 +116,7 @@
     NSString *code = [NSString stringWithFormat:@"%@",responseObject[JT_REDUXDAT_CODE]];
     
     if ([code isEqualToString:JT_REDUXDATCODE_SUCCES_STATE]) {
-        if (self.isSuccessHit) {
+        if (self.isShow_success_Hit) {
             if ([ResourceConfig share].netWorkErrorHit_block)
                 [ResourceConfig share].netWorkSuccessHit_block(responseObject[JT_REDUXDAT_MSG], self.tag);
         }
@@ -125,7 +125,7 @@
         }
     } else {
         
-        if (!self.isHiddenErrorHit) {
+        if (!self.isHidden_failure_errorHit) {
             if ([ResourceConfig share].netWorkErrorHit_block)
                 [ResourceConfig share].netWorkErrorHit_block(responseObject[JT_REDUXDAT_MSG],self.tag);
             

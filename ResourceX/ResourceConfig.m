@@ -8,6 +8,7 @@
 
 #import "ResourceConfig.h"
 #import "ResourceX.h"
+#import "ResourceX+AFNetworking.h"
 
 NSString *JT_REDUXDATA_KEY = @"result";
 NSString *JT_REDUXDAT_MSG = @"msg";
@@ -51,18 +52,25 @@ static ResourceConfig *shareinstance = nil;
     JT_BASEK_API_SERVER = baseApiServer;
 }
 
-+ (void)showErrorHit:(NetWorkHitBlock)hit {
++ (void)configer_showErrorHit:(NetWorkHitBlock)hit {
     [ResourceConfig share].netWorkErrorHit_block = hit;
 }
-+ (void)showSuccessHit:(NetWorkHitBlock)hit {
++ (void)configer_showSuccessHit:(NetWorkHitBlock)hit {
     [ResourceConfig share].netWorkSuccessHit_block = hit;
 }
 
-+ (void)hideHUDFinish:(dispatch_block_t)block {
++ (void)configer_hideHUD_Finish:(dispatch_block_t)block {
      [ResourceConfig share].finishedHidenHUD_block  = block;
 }
-+ (void)showHUDbegin:(dispatch_block_t)block {
++ (void)configer_showHUD_Begin:(dispatch_block_t)block {
      [ResourceConfig share].startShowHUD_block = block;
+}
+
++ (void)configerAFHTTPSessionManager:(ConfigerAFSessionManager)httpSssionManager {
+    [AFHTTPSessionTool sharedManager].AF_httpSessionManager = httpSssionManager;
+}
++ (void)configerSessionHeader:(SessionHeader)headers {
+    [AFHTTPSessionTool sharedManager].sessionHeaders = headers;
 }
 
 @end

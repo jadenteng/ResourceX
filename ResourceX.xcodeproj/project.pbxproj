@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB09E3E6243AE769006E19ED /* Resource_X.h in Headers */ = {isa = PBXBuildFile; fileRef = CB09E3E4243AE769006E19ED /* Resource_X.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB09E3E6243AE769006E19ED /* Resource.h in Headers */ = {isa = PBXBuildFile; fileRef = CB09E3E4243AE769006E19ED /* Resource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB09E415243AE839006E19ED /* ResourceX.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E40F243AE838006E19ED /* ResourceX.m */; };
 		CB09E416243AE839006E19ED /* ResourceX.h in Headers */ = {isa = PBXBuildFile; fileRef = CB09E410243AE838006E19ED /* ResourceX.h */; };
 		CB09E417243AE839006E19ED /* NSMutableArray+Filters.h in Headers */ = {isa = PBXBuildFile; fileRef = CB09E411243AE839006E19ED /* NSMutableArray+Filters.h */; };
@@ -29,13 +29,13 @@
 		CB09E4BF243B4D90006E19ED /* AppDelegate+NetworkConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E438243AECF9006E19ED /* AppDelegate+NetworkConfiguration.m */; };
 		CB09E4C1243B4E28006E19ED /* ResourceX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E3E1243AE769006E19ED /* ResourceX.framework */; };
 		CB09E4C2243B4E28006E19ED /* ResourceX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E3E1243AE769006E19ED /* ResourceX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CB09E4D6243B595E006E19ED /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D2243B595E006E19ED /* AFNetworking.framework */; };
-		CB09E4D7243B595E006E19ED /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D2243B595E006E19ED /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB09E4D8243B595E006E19ED /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D3243B595E006E19ED /* MBProgressHUD.framework */; };
 		CB09E4D9243B595E006E19ED /* MBProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D3243B595E006E19ED /* MBProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CB09E505243B722C006E19ED /* ResourceX+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E450243AF259006E19ED /* ResourceX+AFNetworking.m */; };
 		CBBC7DD1243C1868007E3FFF /* YYModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D1243B595E006E19ED /* YYModel.framework */; };
 		CBBC7DD2243C1868007E3FFF /* YYModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D1243B595E006E19ED /* YYModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CBBC7DD3243C2457007E3FFF /* ResourceX+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E450243AF259006E19ED /* ResourceX+AFNetworking.m */; };
+		CBBC7DD4243C279F007E3FFF /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D2243B595E006E19ED /* AFNetworking.framework */; };
+		CBBC7DD5243C279F007E3FFF /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D2243B595E006E19ED /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +56,8 @@
 			dstSubfolderSpec = 10;
 			files = (
 				CBBC7DD2243C1868007E3FFF /* YYModel.framework in Embed Frameworks */,
+				CBBC7DD5243C279F007E3FFF /* AFNetworking.framework in Embed Frameworks */,
 				CB09E4D9243B595E006E19ED /* MBProgressHUD.framework in Embed Frameworks */,
-				CB09E4D7243B595E006E19ED /* AFNetworking.framework in Embed Frameworks */,
 				CB09E4C2243B4E28006E19ED /* ResourceX.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -67,7 +67,7 @@
 
 /* Begin PBXFileReference section */
 		CB09E3E1243AE769006E19ED /* ResourceX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ResourceX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB09E3E4243AE769006E19ED /* Resource_X.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Resource_X.h; sourceTree = "<group>"; };
+		CB09E3E4243AE769006E19ED /* Resource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Resource.h; sourceTree = "<group>"; };
 		CB09E3E5243AE769006E19ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB09E40F243AE838006E19ED /* ResourceX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceX.m; sourceTree = "<group>"; };
 		CB09E410243AE838006E19ED /* ResourceX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceX.h; sourceTree = "<group>"; };
@@ -119,8 +119,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBBC7DD1243C1868007E3FFF /* YYModel.framework in Frameworks */,
+				CBBC7DD4243C279F007E3FFF /* AFNetworking.framework in Frameworks */,
 				CB09E4D8243B595E006E19ED /* MBProgressHUD.framework in Frameworks */,
-				CB09E4D6243B595E006E19ED /* AFNetworking.framework in Frameworks */,
 				CB09E4C1243B4E28006E19ED /* ResourceX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,12 +150,13 @@
 		CB09E3E3243AE769006E19ED /* ResourceX */ = {
 			isa = PBXGroup;
 			children = (
-				CB09E3E4243AE769006E19ED /* Resource_X.h */,
+				CB09E3E4243AE769006E19ED /* Resource.h */,
 				CB09E44E243AF11D006E19ED /* Headers */,
 				CB09E40F243AE838006E19ED /* ResourceX.m */,
 				CB09E414243AE839006E19ED /* ResourceConfig.m */,
 				CB09E452243AF259006E19ED /* ResourceX+YYModel.m */,
 				CB09E413243AE839006E19ED /* NSMutableArray+Filters.m */,
+				CB09E450243AF259006E19ED /* ResourceX+AFNetworking.m */,
 				CB09E3E5243AE769006E19ED /* Info.plist */,
 			);
 			path = ResourceX;
@@ -189,28 +190,27 @@
 			children = (
 				CB09E410243AE838006E19ED /* ResourceX.h */,
 				CB09E412243AE839006E19ED /* ResourceConfig.h */,
+				CB09E451243AF259006E19ED /* ResourceX+AFNetworking.h */,
 				CB09E44F243AF259006E19ED /* ResourceX+YYModel.h */,
 				CB09E411243AE839006E19ED /* NSMutableArray+Filters.h */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
 		};
-		CB09E456243B3343006E19ED /* Common */ = {
+		CB09E456243B3343006E19ED /* HUD */ = {
 			isa = PBXGroup;
 			children = (
-				CB09E451243AF259006E19ED /* ResourceX+AFNetworking.h */,
-				CB09E450243AF259006E19ED /* ResourceX+AFNetworking.m */,
 				CB09E439243AECF9006E19ED /* MBProgressHUD+RxErrorHit.h */,
 				CB09E43B243AECF9006E19ED /* MBProgressHUD+RxErrorHit.m */,
 			);
-			path = Common;
+			path = HUD;
 			sourceTree = "<group>";
 		};
 		CB09E4A2243B4D56006E19ED /* ResourceX_Example */ = {
 			isa = PBXGroup;
 			children = (
 				CB09E42E243AECE9006E19ED /* Model */,
-				CB09E456243B3343006E19ED /* Common */,
+				CB09E456243B3343006E19ED /* HUD */,
 				CB09E4A3243B4D56006E19ED /* AppDelegate.h */,
 				CB09E4A4243B4D56006E19ED /* AppDelegate.m */,
 				CB09E43A243AECF9006E19ED /* AppDelegate+NetworkConfiguration.h */,
@@ -236,7 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB09E418243AE839006E19ED /* ResourceConfig.h in Headers */,
-				CB09E3E6243AE769006E19ED /* Resource_X.h in Headers */,
+				CB09E3E6243AE769006E19ED /* Resource.h in Headers */,
 				CB09E416243AE839006E19ED /* ResourceX.h in Headers */,
 				CB09E417243AE839006E19ED /* NSMutableArray+Filters.h in Headers */,
 			);
@@ -345,6 +345,7 @@
 			files = (
 				CB09E455243AF87C006E19ED /* ResourceX+YYModel.m in Sources */,
 				CB09E415243AE839006E19ED /* ResourceX.m in Sources */,
+				CBBC7DD3243C2457007E3FFF /* ResourceX+AFNetworking.m in Sources */,
 				CB09E41A243AE839006E19ED /* ResourceConfig.m in Sources */,
 				CB09E419243AE839006E19ED /* NSMutableArray+Filters.m in Sources */,
 			);
@@ -361,7 +362,6 @@
 				CB09E4B6243B4D58006E19ED /* main.m in Sources */,
 				CB09E4BF243B4D90006E19ED /* AppDelegate+NetworkConfiguration.m in Sources */,
 				CB09E4BC243B4D82006E19ED /* Episodes.m in Sources */,
-				CB09E505243B722C006E19ED /* ResourceX+AFNetworking.m in Sources */,
 				CB09E4BE243B4D86006E19ED /* PelistInfoModel.m in Sources */,
 				CB09E4A8243B4D56006E19ED /* SceneDelegate.m in Sources */,
 			);

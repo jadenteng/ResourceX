@@ -14,7 +14,7 @@
 typedef void(^RequestCallBack)(id _Nullable responseObject);
 typedef void(^UploadProgressCallBack)(double progress);
 typedef id _Nullable (^Parser)(id _Nullable data);
-typedef NSDictionary* _Nullable (^SessionHeader)(NSString * _Nullable  url,id _Nullable param);
+
 
 /*!
  @enum
@@ -36,9 +36,9 @@ typedef NS_ENUM(NSInteger, JTCachePolicy) {
 @property (nonatomic,strong)NSString * _Nullable url; //
 @property (nonatomic,assign)NSInteger timeoutInterval; //
 
-@property (nonatomic,assign)BOOL isHiddenErrorHit; //
+@property (nonatomic,assign)BOOL isHidden_failure_errorHit; //
 @property (nonatomic,assign)BOOL isNone_HUD_animated; //
-@property (nonatomic,assign)BOOL isSuccessHit; // 显示获取成功HUD
+@property (nonatomic,assign)BOOL isShow_success_Hit; // 显示获取成功HUD
 
 @property (nonatomic,assign)NSInteger tag; //
 

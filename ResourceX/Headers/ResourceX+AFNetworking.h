@@ -8,23 +8,22 @@
 
 #import "ResourceX.h"
 
-#import <AFNetworking/AFNetworking.h>
+//#import <AFNetworking/AFNetworking.h>
 
-typedef void(^ConfigerManager)(AFHTTPSessionManager * _Nullable manager);
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AFHTTPSessionTool : AFHTTPSessionManager
+@interface AFHTTPSessionTool : NSObject
 
 /// 实现网络本地缓存策略
 @property (nonatomic, strong) NSCache *cache;
 /// 配置header 信息
 @property (nonatomic,copy)SessionHeader _Nullable  sessionHeaders;
 
-+ (AFHTTPSessionTool *)sharedManager;
-
 ///配置AFHTTPSessionManager 相关header信息
-+ (void)af_configerAFHTTPSessionManager:(ConfigerManager)configerManger;
+@property (nonatomic,strong)ConfigerAFSessionManager AF_httpSessionManager; //
+
++ (AFHTTPSessionTool *)sharedManager;
 
 @end
 

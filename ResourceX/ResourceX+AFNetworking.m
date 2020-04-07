@@ -8,18 +8,67 @@
 
 #import "ResourceX+AFNetworking.h"
 
+@protocol AFMultipartFormDataMethodProtocol <NSObject>
+- (void)appendPartWithFileData:(NSData *)data
+                          name:(NSString *)name
+                      fileName:(NSString *)fileName
+                      mimeType:(NSString *)mimeType;
+@end
+@protocol AFrequestSerializerProtocol <NSObject>
+- (void)setTimeoutInterval:(NSInteger)timeoutInterval;
+@end
+@protocol AFNetworkingMethodProtool <NSObject>
+
+- (id<AFrequestSerializerProtocol>)requestSerializer;
+
+- (nullable NSURLSessionDataTask *)POST:(NSString *)URLString
+                             parameters:(nullable id)parameters
+                                headers:(nullable NSDictionary <NSString *, NSString *> *)headers
+                               progress:(nullable void (^)(NSProgress *uploadProgress))uploadProgress
+                                success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
+                                failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure;
+- (nullable NSURLSessionDataTask *)POST:(NSString *)URLString
+                             parameters:(nullable id)parameters
+                                headers:(nullable NSDictionary <NSString *, NSString *> *)headers
+              constructingBodyWithBlock:(nullable void (^)(id <AFMultipartFormDataMethodProtocol> formData))block
+                               progress:(nullable void (^)(NSProgress *uploadProgress))uploadProgress
+                                success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
+                                failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure;
+- (nullable NSURLSessionDataTask *)GET:(NSString *)URLString
+                            parameters:(nullable id)parameters
+                               headers:(nullable NSDictionary <NSString *, NSString *> *)headers
+                              progress:(nullable void (^)(NSProgress *downloadProgress))downloadProgress
+                               success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
+                               failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure;
+
+@end
+
 static AFHTTPSessionTool *shareManager = nil;
 
 @interface AFHTTPSessionTool () <NSCacheDelegate>
+
+@property (nonatomic,strong)id<AFNetworkingMethodProtool> AF_sessionManager;
+
 @end
 
 @implementation AFHTTPSessionTool
+
++ (AFHTTPSessionTool *)sharedManager {
+    
+    if (!shareManager) {
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            shareManager = [[AFHTTPSessionTool alloc] init];
+        });
+    }
+    return shareManager;
+}
+
 
 ///.如果发现当前计算得到的成本超过总成本,那么会自动开启一个回收过程,把之前的数据删除
 - (NSCache *)cache {
     if (_cache == nil) {
         _cache = [[NSCache alloc] init];
-        
         //移除不再被使用的对象
         _cache.evictsObjectsWithDiscardedContent = YES;
         _cache.delegate = self;
@@ -27,34 +76,18 @@ static AFHTTPSessionTool *shareManager = nil;
     return _cache;
 }
 
-- (void)cache:(NSCache *)cache willEvictObject:(id)obj {
-}
-
-+ (AFHTTPSessionTool *)sharedManager {
-    
-    if (!shareManager) {
-        static dispatch_once_t onceToken;
-        dispatch_once(&onceToken, ^{
-            shareManager = [AFHTTPSessionTool manager];
-            [AFHTTPSessionTool configerManger:shareManager];
-            [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
-          
-        });
+- (id<AFNetworkingMethodProtool>)AF_sessionManager {
+    if (!_AF_sessionManager) {
+        @throw [NSException exceptionWithName:@"没有配置AFHTTPSessionManager 对象" reason:@"请使用 [AFHTTPSessionTool sharedManager].AF_httpSessionManager 进行设置" userInfo:nil];
     }
-    return shareManager;
+    return _AF_sessionManager;
+}
+- (void)setAF_httpSessionManager:(ConfigerAFSessionManager)AF_httpSessionManager{
+    _AF_httpSessionManager = AF_httpSessionManager;
+    self.AF_sessionManager = AF_httpSessionManager();
 }
 
-+ (void)af_configerAFHTTPSessionManager:(ConfigerManager)configerManger {
-    configerManger([AFHTTPSessionTool sharedManager]);
-}
-
-+ (void)configerManger:(AFHTTPSessionManager *)manager {
-    
-    manager.requestSerializer.timeoutInterval = 20.0f;
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    manager.responseSerializer = [AFJSONResponseSerializer serializer];
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json",@"multipart/form-data", @"text/javascript",@"text/html",@"text/css",@"text/xml",@"text/plain", @"application/javascript", @"image/*", nil];
-    [manager.requestSerializer setValue:@"application/json; charset=utf-8;" forHTTPHeaderField:@"Content-Type"];
+- (void)cache:(NSCache *)cache willEvictObject:(id)obj {
 }
 
 @end
@@ -66,9 +99,8 @@ static AFHTTPSessionTool *shareManager = nil;
     [self availCachePolicy:parameters];
     
     AFHTTPSessionTool *manager = [AFHTTPSessionTool sharedManager];
-    manager.requestSerializer.timeoutInterval = self.timeoutInterval;
-    
-    [manager POST:self.url parameters:parameters headers:[self configerHeaders:parameters] progress:^(NSProgress * _Nonnull uploadProgress) {
+    [[manager.AF_sessionManager requestSerializer] setTimeoutInterval:self.timeoutInterval];
+    [manager.AF_sessionManager POST:self.url parameters:parameters headers:[self configerHeaders:parameters] progress:^(NSProgress * _Nonnull uploadProgress) {
         double progress = (double)uploadProgress.completedUnitCount / (double)uploadProgress.totalUnitCount;
         if(self.uploadProgressCallBack)
             self.uploadProgressCallBack(progress);
@@ -85,8 +117,8 @@ static AFHTTPSessionTool *shareManager = nil;
     [self availStartLoadHUD_ainmated];
     [self availCachePolicy:parameters];
     AFHTTPSessionTool *manager = [AFHTTPSessionTool sharedManager];
-    manager.requestSerializer.timeoutInterval = self.timeoutInterval;
-    [manager GET:self.url parameters:parameters headers:[self configerHeaders:parameters] progress:^(NSProgress * _Nonnull downloadProgress) {
+    [[manager.AF_sessionManager requestSerializer] setTimeoutInterval:self.timeoutInterval];
+    [manager.AF_sessionManager GET:self.url parameters:parameters headers:[self configerHeaders:parameters] progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [self saveCache:responseObject];
         [self parseResponse:responseObject];
@@ -105,13 +137,13 @@ static AFHTTPSessionTool *shareManager = nil;
     }
     // 缓存数据可读
     AFHTTPSessionTool *manager = [AFHTTPSessionTool sharedManager];
-    manager.requestSerializer.timeoutInterval = self.timeoutInterval;
+    [[manager.AF_sessionManager requestSerializer] setTimeoutInterval:self.timeoutInterval];
     
     NSMutableArray *scaleImageDatas = [images map:^NSData * _Nonnull(UIImage * _Nonnull image) {
         return [ResourceX scaleDataImage:image toKb:60];
     }];
     
-    [manager POST:self.url parameters:parameters headers:[self configerHeaders:parameters] constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    [manager.AF_sessionManager POST:self.url parameters:parameters headers:[self configerHeaders:parameters] constructingBodyWithBlock:^(id<AFMultipartFormDataMethodProtocol>  _Nonnull formData) {
         
         
         [scaleImageDatas forEachIndex:^(NSData *imageData, NSUInteger index) {
@@ -152,7 +184,7 @@ static AFHTTPSessionTool *shareManager = nil;
 - (void)availStartLoadHUD_ainmated {
     if (!self.isNone_HUD_animated) {
         if ([ResourceConfig share].startShowHUD_block)
-        [ResourceConfig share].startShowHUD_block();
+            [ResourceConfig share].startShowHUD_block();
     }
 }
 - (void)availCachePolicy:(NSDictionary *)parameters {

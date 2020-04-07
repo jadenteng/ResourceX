@@ -32,6 +32,8 @@ extern NSString *JT_BASEK_API_SERVER; // The key of the request baseApi
 
 
 typedef void(^NetWorkHitBlock)(id msg,NSInteger tag);
+typedef id _Nullable (^ConfigerAFSessionManager)(void);
+typedef NSDictionary* _Nullable (^SessionHeader)(NSString * _Nullable  url,id _Nullable param);
 
 
 @interface ResourceConfig : NSObject
@@ -49,11 +51,17 @@ typedef void(^NetWorkHitBlock)(id msg,NSInteger tag);
 + (void)setBasek_Api_Server:(NSString *)baseApiServer;/// Api
 + (void)setReduxdatCode_succes_State:(NSString *)reduxdatCodesuccesState; /// State
 
-+ (void)showErrorHit:(NetWorkHitBlock)hit;//错误提示HUD
-+ (void)showSuccessHit:(NetWorkHitBlock)hit;//错误提示HUD
++ (void)configer_showErrorHit:(NetWorkHitBlock)hit;//错误提示HUD
++ (void)configer_showSuccessHit:(NetWorkHitBlock)hit;//错误提示HUD
 
-+ (void)hideHUDFinish:(dispatch_block_t)block;
-+ (void)showHUDbegin:(dispatch_block_t)block;
+/// 开始请求... 加载HUD  请求结束 隐藏HUD
++ (void)configer_showHUD_Begin:(dispatch_block_t)block; ///设置 请求开始 加载HUD
++ (void)configer_hideHUD_Finish:(dispatch_block_t)block;// 设置请求结束 隐藏HUD
+
+
+///配置 AFHTTPSessionManager
++ (void)configerAFHTTPSessionManager:(ConfigerAFSessionManager)httpSssionManager;
++ (void)configerSessionHeader:(SessionHeader)headers;
 
 @end
 

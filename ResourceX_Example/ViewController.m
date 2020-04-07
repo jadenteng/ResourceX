@@ -8,15 +8,11 @@
 
 #import "ViewController.h"
 
-#import "Resource_X.h"
-#import "ResourceX+AFNetworking.h"
-
+#import "Resource.h"
 ///model 相关类
 #import "Episodes.h"
 #import "LoginModel.h"
 #import "PelistInfoModel.h"
-
-//#import <YYModel/YYModel.h>
 
 @interface ViewController ()
 @end
@@ -30,6 +26,8 @@
 - (void)initJsonUrl {
     
     ResourceX *netApi = [ResourceX jsonUrl:@"exmple/dict"];
+    netApi.timeoutInterval = 15;
+   
     [netApi GET_AF:nil];
    
     netApi.success = ^(id  _Nullable responseObject) {
@@ -127,7 +125,7 @@
 - (void)eCachePolicy_ReadWrite {
     
     ResourceX *netApi = [ResourceX yy_array_url:@"episodes" decoder:Episodes.class by:@"episodes"];
-    NSLog(@"写入数据将会缓存到磁盘,如果缓存中有数据那么就会有两次回调 2次 2次 2次");
+    NSLog(@"eCachePolicy_ReadWrite状态,写入数据将会缓存到磁盘,如果缓存中有数据那么就会有两次回调 2次 2次 2次");
     netApi.cachePolicy = eCachePolicy_ReadWrite;
     [netApi GET_AF:@{}];
     [netApi callbackSuccess:^(id  _Nullable responseObject) {
@@ -142,7 +140,7 @@
     ResourceX *netApi = [ResourceX yy_array_url:@"episodes" decoder:Episodes.class by:@"episodes"];
     netApi.tag = 1;
     netApi.cachePolicy = eCachePolicy_WriteOnly;
-    netApi.isSuccessHit = YES; //获取网络成功 显示HUD提示
+    netApi.isShow_success_Hit = YES; //获取网络成功 显示HUD提示
     NSLog(@"写入数据将会缓存到磁盘");
     [netApi GET_AF:@{}];
     [netApi callbackSuccess:^(id  _Nullable responseObject) {
@@ -158,7 +156,7 @@
     ResourceX *netApi = [ResourceX yy_array_url:@"episodes" decoder:Episodes.class by:@"episodes"];
     netApi.cachePolicy = eCachePolicy_NotHandle;
     netApi.isNone_HUD_animated = YES; ///设置不需要加载HUD
-    netApi.isHiddenErrorHit = YES;// 设置当请求发送错误是不需要提示HUD
+    netApi.isHidden_failure_errorHit = YES;// 设置当请求发送错误是不需要提示HUD
    
     [netApi GET_AF:@{}];
     [netApi callbackSuccess:^(id  _Nullable responseObject) {

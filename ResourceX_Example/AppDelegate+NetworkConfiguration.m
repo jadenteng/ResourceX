@@ -8,10 +8,10 @@
 
 #import "AppDelegate+NetworkConfiguration.h"
 //导入RX
-#import "ResourceX+AFNetworking.h"
-
+#import "Resource.h"
 //错误提示视图
 #import "MBProgressHUD+RxErrorHit.h"
+#import <AFNetworking/AFNetworking.h>
 
 #define FormatTime(date) [NSString stringWithFormat:@"%.0lf",([date timeIntervalSince1970]*1000)]
 
@@ -39,21 +39,21 @@
     //    JT_REDUXDATAKEY = @"result";
     
     //配置获取网络失败 提示HUD
-    [ResourceConfig showErrorHit:^(id  _Nonnull msg, NSInteger tag) {
-         [MBProgressHUD showAutoHudInWindow:msg];
+    [ResourceConfig configer_showErrorHit:^(id  _Nonnull msg, NSInteger tag) {
+        [MBProgressHUD showAutoHudInWindow:msg];
     }];
     //配置获取网络成功 提示HUD
-    [ResourceConfig showSuccessHit:^(id  _Nonnull msg, NSInteger tag) {
+    [ResourceConfig configer_showSuccessHit:^(id  _Nonnull msg, NSInteger tag) {
         if (tag == 1) {
             [MBProgressHUD showAutoHudInWindow:msg];
         }
     }];
     //设置 请求开始 加载HUD
-    [ResourceConfig showHUDbegin:^{
+    [ResourceConfig configer_showHUD_Begin:^{
         [MBProgressHUD showHUD_animated:YES];
     }];
     //设置请求结束 隐藏HUD
-    [ResourceConfig hideHUDFinish:^{
+    [ResourceConfig configer_hideHUD_Finish:^{
         [MBProgressHUD hideHUD_animated:YES];
     }];
     //配置 成功时 返回数据状态code
@@ -62,8 +62,19 @@
     //配置主api
     [ResourceConfig setBasek_Api_Server:@"http://mock-api.com/bKkO5MKB.mock"];
     
-    //配置AF sessionHeaders
-    [AFHTTPSessionTool sharedManager].sessionHeaders  = ^ NSDictionary * (NSString *url,id _Nullable parmas){
+    [ResourceConfig configerAFHTTPSessionManager: ^AFHTTPSessionManager *{
+       
+        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+        manager.requestSerializer = [AFJSONRequestSerializer serializer];
+        manager.responseSerializer = [AFJSONResponseSerializer serializer];
+        manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json",@"multipart/form-data", @"text/javascript",@"text/html",@"text/css",@"text/xml",@"text/plain", @"application/javascript", @"image/*", nil];
+        [manager.requestSerializer setValue:@"application/json; charset=utf-8;" forHTTPHeaderField:@"Content-Type"];
+        
+        return manager;
+    }];
+    
+    //配置AF sessionHeaders *服务器header需要的参数设置
+    [ResourceConfig configerSessionHeader:^ NSDictionary * (NSString *url,id _Nullable parmas){
         
         NSString *accountId = @"" ;
         NSString *userToken = @"" ;
@@ -81,7 +92,9 @@
         };
         // NSLog(@"%@\n%@",url,afHeaders);
         return afHeaders;
-    };
-    
+    }];    
 }
+
+
+
 @end
