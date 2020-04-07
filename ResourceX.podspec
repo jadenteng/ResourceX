@@ -17,6 +17,7 @@ Pod::Spec.new do |spec|
   spec.author             = { "JadenTeng" => "781232284@qq.com" }
   spec.platform     = :ios, "9.0"
   spec.source       = { :git => "https://github.com/JadenTeng/ResourceX.git", :tag => "#{spec.version}" }
-  s.requires_arc = true
+  spec.source_files  = "ResourceX", "ResourceX/**/*.{h,m}"
+ # spec.requires_arc = true
 
 end
