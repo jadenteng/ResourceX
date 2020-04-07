@@ -10,8 +10,7 @@ ResourceX 通过AFNetworking、YYModel 解析   网络类封装
 
 #### CocoaPods
 > pod 'ResourceX'   #iOS9 and later        
-或者
-> pod 'ResourceX', '1.2'  
+> pod 'ResourceX', '1.2.1'  
 
 #### Carthage
 > github "JadenTeng/ResourceX"
