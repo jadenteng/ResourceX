@@ -32,32 +32,6 @@ ResourceX *netApi = [ResourceX yy_array_url:@"episodes" decoder:Episodes.class b
         NSLog(@"数据错误:%@",responseObject);
    };
  ```
-## 简单实现OC版 map filter forEach (仅提供思路)
-在学习Swift中，函数式编程中集合类都有一个重要的思想：通过closure来参数化对序列的操作行为 如:map filter forEach reduce
-当你要对Array做一些处理的时候，像C语言中类似的循环和下标，都不是理想的选择 Swift有一套自己的“现代化”手段:通过closure来参数化对数组的操作行为
-
-### 从循环到map
-一个OC中常用的遍历方法
-```
-/// 将一个数组中的数字 转换为一个 NSString 的数组
- // 1 创建一个数组
- NSMutableArray *strsList = [NSMutableArray array];
- NSArray *list = @[@1,@2,@3,@4];
- // 2 遍历需要转换的数组
- for (NSNumber *num in list) {
-     //3 添加到转换NSString的数组
-     [strsList addObject:[NSString stringWithFormat:@"%@",num]];
- }
-```
-虽然这个遍历不难理解，但是，想象一下这段代码在几十行代码中间的时候，或者当这样类似的逻辑反复出现的时候，整体代码的可读性就不那么强了。
-
-#### 使用map
-```
-NSMutableArray *strsList_map = [@[@1,@2,@3,@4] map:^id (id num) {
-        return [NSString stringWithFormat:@"%@",num];}];
-```
-上面这行代码，和之前那段for循环执行的结果是相同的。显然，它比for循环更具表现力，并且也能把我们期望的结果定义成对象。当然，map并不是什么魔法，无非就是把for循环执行的逻辑，封装在了函数里，这样我们就可以把函数的返回值赋值给常量了
-
 ## 提issue前，请先对照Demo、常见问题自查！Demo 在ResourceX_Example目录 打开ResourceX.xcodeproj 选择ResourceX_Example工程。
 
 使用此ResourceX需要自行添加 AFNetworking、YYModel
@@ -126,6 +100,34 @@ if (tag == 1) {
 [MBProgressHUD hideHUD_animated:YES];
 }];
 ```
+## 简单实现OC版 map filter forEach (仅提供思路) 
+提供工具类NSMutableArray+Filters.m文件
+
+在学习Swift中，函数式编程中集合类都有一个重要的思想：通过closure来参数化对序列的操作行为 如:map filter forEach reduce
+当你要对Array做一些处理的时候，像C语言中类似的循环和下标，都不是理想的选择 Swift有一套自己的“现代化”手段:通过closure来参数化对数组的操作行为
+
+### 从循环到map
+一个OC中常用的遍历方法
+```
+/// 将一个数组中的数字 转换为一个 NSString 的数组
+ // 1 创建一个数组
+ NSMutableArray *strsList = [NSMutableArray array];
+ NSArray *list = @[@1,@2,@3,@4];
+ // 2 遍历需要转换的数组
+ for (NSNumber *num in list) {
+     //3 添加到转换NSString的数组
+     [strsList addObject:[NSString stringWithFormat:@"%@",num]];
+ }
+```
+虽然这个遍历不难理解，但是，想象一下这段代码在几十行代码中间的时候，或者当这样类似的逻辑反复出现的时候，整体代码的可读性就不那么强了。
+
+#### 使用map
+```
+NSMutableArray *strsList_map = [@[@1,@2,@3,@4] map:^id (id num) {
+        return [NSString stringWithFormat:@"%@",num];}];
+```
+上面这行代码，和之前那段for循环执行的结果是相同的。显然，它比for循环更具表现力，并且也能把我们期望的结果定义成对象。当然，map并不是什么魔法，无非就是把for循环执行的逻辑，封装在了函数里，这样我们就可以把函数的返回值赋值给常量了
+
 ##  Release Notes 最近更新     
 1.2.1 新增上传图片根据压缩kb上传 Demo优化
 1.2 
