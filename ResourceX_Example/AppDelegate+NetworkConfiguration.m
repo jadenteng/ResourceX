@@ -38,30 +38,12 @@
     //    JT_REDUXDATCODE = @"code";
     //    JT_REDUXDATAKEY = @"result";
     
-    //配置获取网络失败 提示HUD
-    [ResourceConfig configer_showErrorHit:^(id  _Nonnull msg, NSInteger tag) {
-        [MBProgressHUD showAutoHudInWindow:msg];
-    }];
-    //配置获取网络成功 提示HUD
-    [ResourceConfig configer_showSuccessHit:^(id  _Nonnull msg, NSInteger tag) {
-        if (tag == 1) {
-            [MBProgressHUD showAutoHudInWindow:msg];
-        }
-    }];
-    //设置 请求开始 加载HUD
-    [ResourceConfig configer_showHUD_Begin:^{
-        [MBProgressHUD showHUD_animated:YES];
-    }];
-    //设置请求结束 隐藏HUD
-    [ResourceConfig configer_hideHUD_Finish:^{
-        [MBProgressHUD hideHUD_animated:YES];
-    }];
     //配置 成功时 返回数据状态code
     [ResourceConfig setReduxdatCode_succes_State:@"0"];
-    
     //配置主api
     [ResourceConfig setBasek_Api_Server:@"http://mock-api.com/bKkO5MKB.mock"];
     
+    ///设置 AFHTTPSessionManager
     [ResourceConfig configerAFHTTPSessionManager: ^AFHTTPSessionManager *{
         
         AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -92,6 +74,26 @@
         };
         // NSLog(@"%@\n%@",url,afHeaders);
         return afHeaders;
+    }];
+    
+    ///-------------------------可选---------------------------
+    //配置获取网络失败 提示HUD 可自定义实现 HUD
+    [ResourceConfig configer_showErrorHit:^(id  _Nonnull msg, NSInteger tag) {
+        [MBProgressHUD showAutoHudInWindow:msg];
+    }];
+    //配置获取网络成功 提示HUD
+    [ResourceConfig configer_showSuccessHit:^(id  _Nonnull msg, NSInteger tag) {
+        if (tag == 1) {
+            [MBProgressHUD showAutoHudInWindow:msg];
+        }
+    }];
+    //设置 请求开始 加载HUD
+    [ResourceConfig configer_showHUD_Begin:^{
+        [MBProgressHUD showHUD_animated:YES];
+    }];
+    //设置请求结束 隐藏HUD
+    [ResourceConfig configer_hideHUD_Finish:^{
+        [MBProgressHUD hideHUD_animated:YES];
     }];
 }
 

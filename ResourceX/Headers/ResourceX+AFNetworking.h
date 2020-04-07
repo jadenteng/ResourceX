@@ -8,9 +8,6 @@
 
 #import "ResourceX.h"
 
-//#import <AFNetworking/AFNetworking.h>
-
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AFHTTPSessionTool : NSObject
@@ -19,9 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSCache *cache;
 /// 配置header 信息
 @property (nonatomic,copy)SessionHeader _Nullable  sessionHeaders;
-
 ///配置AFHTTPSessionManager 相关header信息
-@property (nonatomic,strong)ConfigerAFSessionManager AF_httpSessionManager; //
+@property (nonatomic,strong)ConfigerAFSessionManager AF_httpSessionManager;
+//压缩图片文件大小 默认压缩大小为120kb
+@property (nonatomic,assign)NSInteger image_compression_kb;
 
 + (AFHTTPSessionTool *)sharedManager;
 
@@ -35,9 +33,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)GET_AF:(id _Nullable)parameters;
 // 发起上传图片 请求
 - (void)POST_AF:(id)parameters Images:(NSArray *)images;
+// 发起上传图片 请求 图片压缩大小
+- (void)POST_AF:(id)parameters Images:(NSArray *)images toKb:(NSInteger)kb;
 
 @end
-
 
 
 NS_ASSUME_NONNULL_END

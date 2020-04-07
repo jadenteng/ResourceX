@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ResourceX (YYModel)
+
 /// json对象
 + (ResourceX *)url:(NSString *)url;
 + (ResourceX *)jsonUrl:(NSString *)url;

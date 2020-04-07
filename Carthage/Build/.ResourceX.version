@@ -1,9 +1,9 @@
 {
-  "commitish" : "761955aa1edbd6502b29108670de117c7dc837e1",
+  "commitish" : "cc3944544d23aef6670e40c41d7e58928fad381d",
   "iOS" : [
     {
       "name" : "ResourceX",
-      "hash" : "e22919f8bf25a52108ee39a7c4d2ac9004aa5cedf4b16c77bd8f14cf32d2dfb3"
+      "hash" : "4aa184c16cb538e87854b68d3823ac31def505acec8d6eb5379dc74b9d2b13b0"
     }
   ]
 }

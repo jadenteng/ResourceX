@@ -79,14 +79,14 @@ static AFHTTPSessionTool *shareManager = nil;
 - (id<AFNetworkingMethodProtool>)AF_sessionManager {
     if (!_AF_sessionManager) {
         @throw [NSException exceptionWithName:@"没有配置AFHTTPSessionManager 对象,请使用下面方法进行配置! (可复制下面代码进行设置)" reason:@"<<<\n[ResourceConfig configerAFHTTPSessionManager: ^ AFHTTPSessionManager *{\
-             \n\
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];\
-              \n\
-    //manager ....\
-             \n\
-    return manager;\
-            \n\
-}];\n>>>" userInfo:nil];\
+                \n\
+                AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];\
+                \n\
+                //manager ....\
+                \n\
+                return manager;\
+                \n\
+                }];\n>>>" userInfo:nil];\
     }
     return _AF_sessionManager;
 }
@@ -138,22 +138,26 @@ static AFHTTPSessionTool *shareManager = nil;
 
 //带有图片的请求
 - (void)POST_AF:(id)parameters Images:(NSArray *)images {
-    
+    [self POST_AF:parameters Images:images toKb:[AFHTTPSessionTool sharedManager].image_compression_kb];
+}
+// 发起上传图片 请求 图片压缩
+- (void)POST_AF:(id)parameters Images:(NSArray *)images toKb:(NSInteger)kb {
     [self availStartLoadHUD_ainmated];
     if (!parameters) {
         parameters = @{};
     }
-    // 缓存数据可读
+    if (kb <= 0) {
+        kb = 60;
+    }
     AFHTTPSessionTool *manager = [AFHTTPSessionTool sharedManager];
     [[manager.AF_sessionManager requestSerializer] setTimeoutInterval:self.timeoutInterval];
     
     NSMutableArray *scaleImageDatas = [images map:^NSData * _Nonnull(UIImage * _Nonnull image) {
-        return [ResourceX scaleDataImage:image toKb:60];
+        return [ResourceX scaleDataImage:image toKb:kb];
     }];
     
     [manager.AF_sessionManager POST:self.url parameters:parameters headers:[self configerHeaders:parameters] constructingBodyWithBlock:^(id<AFMultipartFormDataMethodProtocol>  _Nonnull formData) {
-        
-        
+            
         [scaleImageDatas forEachIndex:^(NSData *imageData, NSUInteger index) {
             NSString *fileName = [NSString stringWithFormat:@"%@%ld.jpg",[ResourceX createUUID],(long)index];
             [formData appendPartWithFileData:imageData name:@"file" fileName:fileName mimeType:@"image/jpeg"];
@@ -178,7 +182,6 @@ static AFHTTPSessionTool *shareManager = nil;
         if (responseObject) {
             [cache setObject:responseObject forKey:self.urlCacheKey];
         }
-        
     }
 }
 - (NSDictionary *)configerHeaders:(NSDictionary *)parameters {
