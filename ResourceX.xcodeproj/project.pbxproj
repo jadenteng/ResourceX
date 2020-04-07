@@ -31,6 +31,7 @@
 		CB09E4C2243B4E28006E19ED /* ResourceX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E3E1243AE769006E19ED /* ResourceX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB09E4D8243B595E006E19ED /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D3243B595E006E19ED /* MBProgressHUD.framework */; };
 		CB09E4D9243B595E006E19ED /* MBProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D3243B595E006E19ED /* MBProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CB388DE6243CB85500A5AFB6 /* ResourceConst.h in Headers */ = {isa = PBXBuildFile; fileRef = CB388DE5243CB85500A5AFB6 /* ResourceConst.h */; };
 		CBBC7DD1243C1868007E3FFF /* YYModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D1243B595E006E19ED /* YYModel.framework */; };
 		CBBC7DD2243C1868007E3FFF /* YYModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D1243B595E006E19ED /* YYModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CBBC7DD3243C2457007E3FFF /* ResourceX+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E450243AF259006E19ED /* ResourceX+AFNetworking.m */; };
@@ -104,6 +105,7 @@
 		CB09E4D1243B595E006E19ED /* YYModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YYModel.framework; path = ResourceX_Example/YYModel.framework; sourceTree = "<group>"; };
 		CB09E4D2243B595E006E19ED /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = ResourceX_Example/AFNetworking.framework; sourceTree = "<group>"; };
 		CB09E4D3243B595E006E19ED /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = ResourceX_Example/MBProgressHUD.framework; sourceTree = "<group>"; };
+		CB388DE5243CB85500A5AFB6 /* ResourceConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResourceConst.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				CB09E410243AE838006E19ED /* ResourceX.h */,
+				CB388DE5243CB85500A5AFB6 /* ResourceConst.h */,
 				CB09E412243AE839006E19ED /* ResourceConfig.h */,
 				CB09E451243AF259006E19ED /* ResourceX+AFNetworking.h */,
 				CB09E44F243AF259006E19ED /* ResourceX+YYModel.h */,
@@ -237,6 +240,7 @@
 			files = (
 				CB09E418243AE839006E19ED /* ResourceConfig.h in Headers */,
 				CB09E3E6243AE769006E19ED /* Resource.h in Headers */,
+				CB388DE6243CB85500A5AFB6 /* ResourceConst.h in Headers */,
 				CB09E416243AE839006E19ED /* ResourceX.h in Headers */,
 				CB09E417243AE839006E19ED /* NSMutableArray+Filters.h in Headers */,
 			);

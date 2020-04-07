@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ResourceConfig.h"
 #import "NSMutableArray+Filters.h"
+#import "ResourceConst.h"
 
 @class UIImage;
 typedef void(^RequestCallBack)(id _Nullable responseObject);

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ResourceConst.h"
 
 NS_ASSUME_NONNULL_BEGIN
 ///服务器返回数据格式

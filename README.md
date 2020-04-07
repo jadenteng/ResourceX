@@ -10,9 +10,9 @@
 这样的流程不仅每次获取到服务器数据后都会有大量的逻辑去处理服务器返回的JSON
 于是，这部分功能很容易写出复杂臃肿的函数或者逻辑，但仔细看看却又觉得没什么更好的办法。这种函数不仅看上去不美观，也难以进行单元测试
 
-# 一. ***通过泛型编程简化网络请求***
+# 一. **通过泛型编程简化网络请求**
 
-通过泛型编程，把请求中的这三个过程真正抽象出来，以达到进一步解耦网络请求和业务逻辑代码的目的。
+- 通过泛型编程，把请求中的这三个过程真正抽象出来，以达到进一步解耦网络请求和业务逻辑代码的目的。
 
 #### *创建ResourceX 设置转换Model 去掉了获取复杂的获取json中逻辑,也去掉了json转为对应的model时处理逻辑*
 ```
@@ -41,11 +41,18 @@ NSLog(@"数据错误:%@",responseObject);
 ### 一. Installation 安装
 
 #### CocoaPods
-> pod 'ResourceX'   #iOS9 and later        
-> pod 'ResourceX', '1.2.1'  
+
+```ruby
+pod 'ResourceX'  
+```
+```ruby
+pod 'ResourceX', '1.2.1'
+```  
 
 #### Carthage
-> github "JadenTeng/ResourceX"
+```objective-c
+github "JadenTeng/ResourceX"
+```
 
 #### 手动安装
 > 将ResourceX文件夹拽入项目中，导入头文件：#import "Resource.h"
@@ -53,7 +60,7 @@ NSLog(@"数据错误:%@",responseObject);
 ### 二. Example 例子
 
 #### 服务器返回格式如
-```
+```objective-c
 {
   "code": "0",
   "result": {
@@ -67,7 +74,8 @@ NSLog(@"数据错误:%@",responseObject);
 ```
 #### 配置服务器相关key 返回成功状态值
 
-```//配置服务器返回字典的key
+```objective-c
+//配置服务器返回字典的key
 [ResourceConfig setReduxdata_Code:@"code"];
 [ResourceConfig setReduxdata_Key:@"result"];
 [ResourceConfig setReduxdata_Msg:@"msg"];
@@ -82,7 +90,7 @@ NSLog(@"数据错误:%@",responseObject);
 [ResourceConfig configerSessionHeader:^ NSDictionary * (NSString *url,id _Nullable parmas){}];
 ```
 #### 发起请求
-```
+```objective-c
 //1 配置接口 decoder解码对象 LoginModel
 ResourceX *netApi = [ResourceX jsonUrl:@"exmple/loginModel" decoder:LoginModel.class];
 //2 发送请求方式GET POST
@@ -93,7 +101,8 @@ netApi.success = ^(id  _Nullable responseObject) {
 };
 ```
 ####  可选HUD配置
-``` //配置获取网络失败 提示HUD 可自定义实现 HUD
+```objective-c
+//配置获取网络失败 提示HUD 可自定义实现 HUD
 [ResourceConfig configer_showErrorHit:^(id  _Nonnull msg, NSInteger tag) {
 [MBProgressHUD showAutoHudInWindow:msg];
 }];
@@ -120,7 +129,7 @@ if (tag == 1) {
 
 ### 从循环到map
 一个OC中常用的遍历方法
-```
+```objective-c
 /// 将一个数组中的数字 转换为一个 NSString 的数组
 // 1 创建一个数组
 NSMutableArray *strsList = [NSMutableArray array];
@@ -134,7 +143,7 @@ for (NSNumber *num in list) {
 虽然这个遍历不难理解，但是，想象一下这段代码在几十行代码中间的时候，或者当这样类似的逻辑反复出现的时候，整体代码的可读性就不那么强了。
 
 #### 使用map
-```
+```objective-c
 NSMutableArray *strsList_map = [@[@1,@2,@3,@4] map:^id (id num) {
 return [NSString stringWithFormat:@"%@",num];}];
 ```
