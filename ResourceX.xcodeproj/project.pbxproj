@@ -29,13 +29,13 @@
 		CB09E4BF243B4D90006E19ED /* AppDelegate+NetworkConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E438243AECF9006E19ED /* AppDelegate+NetworkConfiguration.m */; };
 		CB09E4C1243B4E28006E19ED /* ResourceX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E3E1243AE769006E19ED /* ResourceX.framework */; };
 		CB09E4C2243B4E28006E19ED /* ResourceX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E3E1243AE769006E19ED /* ResourceX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CB09E4D4243B595E006E19ED /* YYModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D1243B595E006E19ED /* YYModel.framework */; };
-		CB09E4D5243B595E006E19ED /* YYModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D1243B595E006E19ED /* YYModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB09E4D6243B595E006E19ED /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D2243B595E006E19ED /* AFNetworking.framework */; };
 		CB09E4D7243B595E006E19ED /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D2243B595E006E19ED /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB09E4D8243B595E006E19ED /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D3243B595E006E19ED /* MBProgressHUD.framework */; };
 		CB09E4D9243B595E006E19ED /* MBProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D3243B595E006E19ED /* MBProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB09E505243B722C006E19ED /* ResourceX+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E450243AF259006E19ED /* ResourceX+AFNetworking.m */; };
+		CBBC7DD1243C1868007E3FFF /* YYModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D1243B595E006E19ED /* YYModel.framework */; };
+		CBBC7DD2243C1868007E3FFF /* YYModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D1243B595E006E19ED /* YYModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +55,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				CBBC7DD2243C1868007E3FFF /* YYModel.framework in Embed Frameworks */,
 				CB09E4D9243B595E006E19ED /* MBProgressHUD.framework in Embed Frameworks */,
-				CB09E4D5243B595E006E19ED /* YYModel.framework in Embed Frameworks */,
 				CB09E4D7243B595E006E19ED /* AFNetworking.framework in Embed Frameworks */,
 				CB09E4C2243B4E28006E19ED /* ResourceX.framework in Embed Frameworks */,
 			);
@@ -118,8 +118,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBBC7DD1243C1868007E3FFF /* YYModel.framework in Frameworks */,
 				CB09E4D8243B595E006E19ED /* MBProgressHUD.framework in Frameworks */,
-				CB09E4D4243B595E006E19ED /* YYModel.framework in Frameworks */,
 				CB09E4D6243B595E006E19ED /* AFNetworking.framework in Frameworks */,
 				CB09E4C1243B4E28006E19ED /* ResourceX.framework in Frameworks */,
 			);
@@ -523,10 +523,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/ResourceX_Example",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ResourceX/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -555,10 +552,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/ResourceX_Example",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ResourceX/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (

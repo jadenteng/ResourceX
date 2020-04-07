@@ -140,8 +140,9 @@
 - (void)eCachePolicy_WriteOnly {
     
     ResourceX *netApi = [ResourceX yy_array_url:@"episodes" decoder:Episodes.class by:@"episodes"];
+    netApi.tag = 1;
     netApi.cachePolicy = eCachePolicy_WriteOnly;
-    
+    netApi.isSuccessHit = YES; //获取网络成功 显示HUD提示
     NSLog(@"写入数据将会缓存到磁盘");
     [netApi GET_AF:@{}];
     [netApi callbackSuccess:^(id  _Nullable responseObject) {

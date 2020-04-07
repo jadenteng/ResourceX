@@ -154,7 +154,6 @@
             
             return  [ResourceX mutableArray_reduxdeData:[ResourceX reduxData:data]  coderClass:decoderClass];
         };
-        
     }
     return self;
 }
@@ -174,15 +173,33 @@
         return data;
     } else if (decoderClass == NSMutableArray.class) {
         return [data mutableCopy];
-    } else
-        return [decoderClass yy_modelWithJSON:data];
+    } else {
+        @try {
+            return [decoderClass yy_modelWithJSON:data];
+        } @catch (NSException *exception) {
+            NSLog(@"转换model失败,请导入YYModel!");
+            return data;
+        }
+        // return [decoderClass yy_modelWithJSON:data];
+    }
 }
 
 + (id)array_reduxdeData:(id)data coderClass:(Class)decoderClass {
-    return [NSArray yy_modelArrayWithClass:decoderClass json:data];
+    @try {
+        return [NSArray yy_modelArrayWithClass:decoderClass json:data];
+    } @catch (NSException *exception) {
+        NSLog(@"转换model失败,请导入YYModel!");
+        return data;
+    }
+    
 }
 + (id)mutableArray_reduxdeData:(id)data coderClass:(Class)decoderClass {
-    return [[NSArray yy_modelArrayWithClass:decoderClass json:data] mutableCopy];
+    @try {
+        return [[NSArray yy_modelArrayWithClass:decoderClass json:data] mutableCopy];
+    } @catch (NSException *exception) {
+        NSLog(@"转换model失败,请导入YYModel!");
+        return data;
+    }
 }
 @end
 

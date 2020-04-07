@@ -51,8 +51,11 @@ static ResourceConfig *shareinstance = nil;
     JT_BASEK_API_SERVER = baseApiServer;
 }
 
-+ (void)showErrorHit:(NetWorkErrorHit)hit {
-    [ResourceConfig share].netWorkErrorHit = hit;
++ (void)showErrorHit:(NetWorkHitBlock)hit {
+    [ResourceConfig share].netWorkErrorHit_block = hit;
+}
++ (void)showSuccessHit:(NetWorkHitBlock)hit {
+    [ResourceConfig share].netWorkSuccessHit_block = hit;
 }
 
 + (void)hideHUDFinish:(dispatch_block_t)block {

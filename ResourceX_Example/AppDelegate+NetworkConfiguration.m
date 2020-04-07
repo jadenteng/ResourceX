@@ -30,7 +30,7 @@
      }
      */
     
-    //配置服务器反正字典的key类型
+    //配置服务器返回字典的key
     [ResourceConfig setReduxdata_Code:@"code"];
     [ResourceConfig setReduxdata_Key:@"result"];
     [ResourceConfig setReduxdata_Msg:@"msg"];
@@ -38,9 +38,15 @@
     //    JT_REDUXDATCODE = @"code";
     //    JT_REDUXDATAKEY = @"result";
     
-    //配置获取网络失败 提示视图
-    [ResourceConfig showErrorHit:^(id  _Nonnull msg) {
-        [MBProgressHUD showAutoHudInWindow:msg];
+    //配置获取网络失败 提示HUD
+    [ResourceConfig showErrorHit:^(id  _Nonnull msg, NSInteger tag) {
+         [MBProgressHUD showAutoHudInWindow:msg];
+    }];
+    //配置获取网络成功 提示HUD
+    [ResourceConfig showSuccessHit:^(id  _Nonnull msg, NSInteger tag) {
+        if (tag == 1) {
+            [MBProgressHUD showAutoHudInWindow:msg];
+        }
     }];
     //设置 请求开始 加载HUD
     [ResourceConfig showHUDbegin:^{

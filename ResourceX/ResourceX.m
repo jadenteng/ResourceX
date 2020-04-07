@@ -72,10 +72,10 @@
 }
 // 解析服务器的返回数据
 - (void)parseResponse:(id)responseObject {
-   
+    
     if ([ResourceConfig share].finishedHidenHUD_block)
         [ResourceConfig share].finishedHidenHUD_block();
-        
+    
     if ([responseObject isKindOfClass:[NSError class]]) {
         
         NSError *error = responseObject;
@@ -114,19 +114,23 @@
     }
     
     NSString *code = [NSString stringWithFormat:@"%@",responseObject[JT_REDUXDAT_CODE]];
-
+    
     if ([code isEqualToString:JT_REDUXDATCODE_SUCCES_STATE]) {
+        if (self.isSuccessHit) {
+            if ([ResourceConfig share].netWorkErrorHit_block)
+                [ResourceConfig share].netWorkSuccessHit_block(responseObject[JT_REDUXDAT_MSG], self.tag);
+        }
         if (self.success) {
             self.success(self.parser(responseObject));
         }
     } else {
         
         if (!self.isHiddenErrorHit) {
-            if ([ResourceConfig share].netWorkErrorHit) {
-                [ResourceConfig share].netWorkErrorHit(responseObject[JT_REDUXDAT_MSG]);
-            }
+            if ([ResourceConfig share].netWorkErrorHit_block)
+                [ResourceConfig share].netWorkErrorHit_block(responseObject[JT_REDUXDAT_MSG],self.tag);
+            
         }
-       
+        
         NSLog(@"%@",responseObject);
         if (self.failure) {
             self.failure(responseObject);
@@ -140,8 +144,8 @@
     
     if (self.finishedCallBack)
         self.finishedCallBack(responseObject);
-
-  //  [self cancelOperation];
+    
+    //  [self cancelOperation];
     
 }
 
@@ -172,7 +176,7 @@
     
     [[[NSURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:self.url] completionHandler:^(NSData * _Nullable data, NSURLResponse *  response, NSError * _Nullable error) {
         
-     ///   NSString *jsonStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        ///   NSString *jsonStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         NSDictionary *json;
         if (error) {
             json = error.userInfo;

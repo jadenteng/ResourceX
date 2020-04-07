@@ -30,11 +30,14 @@ extern NSString *JT_REDUXDAT_CODE; //The key of the request code
 extern NSString *JT_REDUXDATCODE_SUCCES_STATE; //The key of the request code state
 extern NSString *JT_BASEK_API_SERVER; // The key of the request baseApi
 
-typedef void(^NetWorkErrorHit)(id msg);
+
+typedef void(^NetWorkHitBlock)(id msg,NSInteger tag);
+
 
 @interface ResourceConfig : NSObject
 
-@property (nonatomic,copy)NetWorkErrorHit netWorkErrorHit; //net return failure hit Block
+@property (nonatomic,copy)NetWorkHitBlock netWorkErrorHit_block; //net return failure hit Block
+@property (nonatomic,copy)NetWorkHitBlock netWorkSuccessHit_block; //net return success hit Block
 @property (nonatomic,copy)dispatch_block_t finishedHidenHUD_block; //
 @property (nonatomic,copy)dispatch_block_t startShowHUD_block; //
 
@@ -46,7 +49,8 @@ typedef void(^NetWorkErrorHit)(id msg);
 + (void)setBasek_Api_Server:(NSString *)baseApiServer;/// Api
 + (void)setReduxdatCode_succes_State:(NSString *)reduxdatCodesuccesState; /// State
 
-+ (void)showErrorHit:(NetWorkErrorHit)hit;//错误提示HUD
++ (void)showErrorHit:(NetWorkHitBlock)hit;//错误提示HUD
++ (void)showSuccessHit:(NetWorkHitBlock)hit;//错误提示HUD
 
 + (void)hideHUDFinish:(dispatch_block_t)block;
 + (void)showHUDbegin:(dispatch_block_t)block;

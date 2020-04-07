@@ -38,6 +38,9 @@ typedef NS_ENUM(NSInteger, JTCachePolicy) {
 
 @property (nonatomic,assign)BOOL isHiddenErrorHit; //
 @property (nonatomic,assign)BOOL isNone_HUD_animated; //
+@property (nonatomic,assign)BOOL isSuccessHit; // 显示获取成功HUD
+
+@property (nonatomic,assign)NSInteger tag; //
 
 
 @property (nonatomic,copy)Parser _Nullable parser; //
