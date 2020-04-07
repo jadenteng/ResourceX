@@ -7,13 +7,15 @@
 //
 
 #import "ResourceX.h"
-#import "ResourceX+YYModel.h"
-#import "ResourceX+AFNetworking.h"
+#import "ResourceConfig.h"
+#import "NSMutableArray+Filters.h" ///常用数组 操作指令
+
+#import "ResourceX+YYModel.h"      ///注:需要在自己工程添加 YYModel
+#import "ResourceX+AFNetworking.h" ///注:需要在自己工程添加 AFNetworking 版本 4.0
+
+
 
 FOUNDATION_EXPORT double ResourceXVersionNumber;
 
 //! Project version string for ResourceX.
 FOUNDATION_EXPORT const unsigned char ResourceXVersionString[];
-
-//网络导入 ResourceX+AFNetworking.h 导入(工程pod 或者 Carthage) AFNetworking 版本 4.0
-//模型转换 ResourceX+YYModel        导入(工程pod 或者 Carthage) YYModel

@@ -177,7 +177,7 @@
         @try {
             return [decoderClass yy_modelWithJSON:data];
         } @catch (NSException *exception) {
-            NSLog(@"转换model失败,请导入YYModel!");
+            NSLog(@"================转换model失败,请在工程添加 YYModel==================");
             return data;
         }
         // return [decoderClass yy_modelWithJSON:data];
@@ -188,7 +188,7 @@
     @try {
         return [NSArray yy_modelArrayWithClass:decoderClass json:data];
     } @catch (NSException *exception) {
-        NSLog(@"转换model失败,请导入YYModel!");
+        NSLog(@"================转换model失败,请在工程添加 YYModel==================");
         return data;
     }
     
@@ -197,7 +197,7 @@
     @try {
         return [[NSArray yy_modelArrayWithClass:decoderClass json:data] mutableCopy];
     } @catch (NSException *exception) {
-        NSLog(@"转换model失败,请导入YYModel!");
+        NSLog(@"================转换model失败,请在工程添加 YYModel==================");
         return data;
     }
 }

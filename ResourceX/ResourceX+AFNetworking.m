@@ -78,7 +78,15 @@ static AFHTTPSessionTool *shareManager = nil;
 
 - (id<AFNetworkingMethodProtool>)AF_sessionManager {
     if (!_AF_sessionManager) {
-        @throw [NSException exceptionWithName:@"没有配置AFHTTPSessionManager 对象" reason:@"请使用 [AFHTTPSessionTool sharedManager].AF_httpSessionManager 进行设置" userInfo:nil];
+        @throw [NSException exceptionWithName:@"没有配置AFHTTPSessionManager 对象,请使用下面方法进行配置! (可复制下面代码进行设置)" reason:@"<<<\n[ResourceConfig configerAFHTTPSessionManager: ^ AFHTTPSessionManager *{\
+             \n\
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];\
+              \n\
+    //manager ....\
+             \n\
+    return manager;\
+            \n\
+}];\n>>>" userInfo:nil];\
     }
     return _AF_sessionManager;
 }
