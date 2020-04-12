@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <ResourceX/Resource.h>
 
 @interface ResourceX_ExampleTests : XCTestCase
 

@@ -9,7 +9,7 @@
 #import "ResourceX.h"
 #import "ResourceConfig.h"
 #import "ResourceConst.h"
-#import "NSMutableArray+Filters.h" ///常用数组 操作指令
+#import "NSArray+Filters.h" ///常用数组 操作指令
 
 #import "ResourceX+YYModel.h"      ///注:需要在自己工程添加 YYModel
 #import "ResourceX+AFNetworking.h" ///注:需要在自己工程添加 AFNetworking 版本 4.0

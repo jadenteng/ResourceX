@@ -1,8 +1,8 @@
 //
-//  NSMutableArray+Filters.h
+//  NSArray+Filters.h
 //  ResourceX
 //
-//  Created by dqdeng on 2020/4/5.
+//  Created by dqdeng on 2020/4/12.
 //  Copyright © 2020 Jaden. All rights reserved.
 //
 
@@ -16,17 +16,7 @@ typedef void (^FiltersTransformEachIndex)(id _Nonnull ,NSUInteger idx);
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSMutableArray (Filters)
-
-- (NSMutableArray*)map:(FiltersTransformMap)transform;
-- (NSMutableArray*)filter:(FiltersTransformFilter)predicate;
-- (void)forEach:(FiltersTransformEach)element;
-- (void)forEachIndex:(FiltersTransformEachIndex)element;
-
-@end
-
 @interface NSArray (Filters)
-
 - (NSMutableArray*)map:(FiltersTransformMap)transform;
 - (NSMutableArray*)filter:(FiltersTransformFilter)predicate;
 - (void)forEach:(FiltersTransformEach)element;

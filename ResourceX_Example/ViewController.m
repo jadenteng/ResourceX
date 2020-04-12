@@ -21,10 +21,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
 }
 
 - (void)initJsonUrl {
     
+   
     ResourceX *netApi = [ResourceX jsonUrl:@"exmple/dict"];
     netApi.timeoutInterval = 15;
    

@@ -10,9 +10,7 @@
 		CB09E3E6243AE769006E19ED /* Resource.h in Headers */ = {isa = PBXBuildFile; fileRef = CB09E3E4243AE769006E19ED /* Resource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB09E415243AE839006E19ED /* ResourceX.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E40F243AE838006E19ED /* ResourceX.m */; };
 		CB09E416243AE839006E19ED /* ResourceX.h in Headers */ = {isa = PBXBuildFile; fileRef = CB09E410243AE838006E19ED /* ResourceX.h */; };
-		CB09E417243AE839006E19ED /* NSMutableArray+Filters.h in Headers */ = {isa = PBXBuildFile; fileRef = CB09E411243AE839006E19ED /* NSMutableArray+Filters.h */; };
 		CB09E418243AE839006E19ED /* ResourceConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = CB09E412243AE839006E19ED /* ResourceConfig.h */; };
-		CB09E419243AE839006E19ED /* NSMutableArray+Filters.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E413243AE839006E19ED /* NSMutableArray+Filters.m */; };
 		CB09E41A243AE839006E19ED /* ResourceConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E414243AE839006E19ED /* ResourceConfig.m */; };
 		CB09E455243AF87C006E19ED /* ResourceX+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E452243AF259006E19ED /* ResourceX+YYModel.m */; };
 		CB09E4A5243B4D56006E19ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E4A4243B4D56006E19ED /* AppDelegate.m */; };
@@ -32,6 +30,8 @@
 		CB09E4D8243B595E006E19ED /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D3243B595E006E19ED /* MBProgressHUD.framework */; };
 		CB09E4D9243B595E006E19ED /* MBProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D3243B595E006E19ED /* MBProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB278E6D244347A700B98C1F /* ResourceX_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB278E6C244347A700B98C1F /* ResourceX_ExampleTests.m */; };
+		CB278E7624434CC700B98C1F /* NSArray+Filters.h in Headers */ = {isa = PBXBuildFile; fileRef = CB278E7424434CC700B98C1F /* NSArray+Filters.h */; };
+		CB278E7724434CC700B98C1F /* NSArray+Filters.m in Sources */ = {isa = PBXBuildFile; fileRef = CB278E7524434CC700B98C1F /* NSArray+Filters.m */; };
 		CB388DE6243CB85500A5AFB6 /* ResourceConst.h in Headers */ = {isa = PBXBuildFile; fileRef = CB388DE5243CB85500A5AFB6 /* ResourceConst.h */; };
 		CBBC7DD1243C1868007E3FFF /* YYModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D1243B595E006E19ED /* YYModel.framework */; };
 		CBBC7DD2243C1868007E3FFF /* YYModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D1243B595E006E19ED /* YYModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -80,9 +80,7 @@
 		CB09E3E5243AE769006E19ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB09E40F243AE838006E19ED /* ResourceX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceX.m; sourceTree = "<group>"; };
 		CB09E410243AE838006E19ED /* ResourceX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceX.h; sourceTree = "<group>"; };
-		CB09E411243AE839006E19ED /* NSMutableArray+Filters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Filters.h"; sourceTree = "<group>"; };
 		CB09E412243AE839006E19ED /* ResourceConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceConfig.h; sourceTree = "<group>"; };
-		CB09E413243AE839006E19ED /* NSMutableArray+Filters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Filters.m"; sourceTree = "<group>"; };
 		CB09E414243AE839006E19ED /* ResourceConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceConfig.m; sourceTree = "<group>"; };
 		CB09E42F243AECE9006E19ED /* LoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
 		CB09E430243AECE9006E19ED /* PelistInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PelistInfoModel.m; sourceTree = "<group>"; };
@@ -116,6 +114,8 @@
 		CB278E6A244347A700B98C1F /* ResourceX_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResourceX_ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB278E6C244347A700B98C1F /* ResourceX_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResourceX_ExampleTests.m; sourceTree = "<group>"; };
 		CB278E6E244347A700B98C1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB278E7424434CC700B98C1F /* NSArray+Filters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Filters.h"; sourceTree = "<group>"; };
+		CB278E7524434CC700B98C1F /* NSArray+Filters.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Filters.m"; sourceTree = "<group>"; };
 		CB388DE5243CB85500A5AFB6 /* ResourceConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResourceConst.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,7 +177,7 @@
 				CB09E40F243AE838006E19ED /* ResourceX.m */,
 				CB09E414243AE839006E19ED /* ResourceConfig.m */,
 				CB09E452243AF259006E19ED /* ResourceX+YYModel.m */,
-				CB09E413243AE839006E19ED /* NSMutableArray+Filters.m */,
+				CB278E7524434CC700B98C1F /* NSArray+Filters.m */,
 				CB09E450243AF259006E19ED /* ResourceX+AFNetworking.m */,
 				CB09E3E5243AE769006E19ED /* Info.plist */,
 			);
@@ -215,7 +215,7 @@
 				CB09E412243AE839006E19ED /* ResourceConfig.h */,
 				CB09E451243AF259006E19ED /* ResourceX+AFNetworking.h */,
 				CB09E44F243AF259006E19ED /* ResourceX+YYModel.h */,
-				CB09E411243AE839006E19ED /* NSMutableArray+Filters.h */,
+				CB278E7424434CC700B98C1F /* NSArray+Filters.h */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
@@ -270,8 +270,8 @@
 				CB09E418243AE839006E19ED /* ResourceConfig.h in Headers */,
 				CB09E3E6243AE769006E19ED /* Resource.h in Headers */,
 				CB388DE6243CB85500A5AFB6 /* ResourceConst.h in Headers */,
+				CB278E7624434CC700B98C1F /* NSArray+Filters.h in Headers */,
 				CB09E416243AE839006E19ED /* ResourceX.h in Headers */,
-				CB09E417243AE839006E19ED /* NSMutableArray+Filters.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,11 +406,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB278E7724434CC700B98C1F /* NSArray+Filters.m in Sources */,
 				CB09E455243AF87C006E19ED /* ResourceX+YYModel.m in Sources */,
 				CB09E415243AE839006E19ED /* ResourceX.m in Sources */,
 				CBBC7DD3243C2457007E3FFF /* ResourceX+AFNetworking.m in Sources */,
 				CB09E41A243AE839006E19ED /* ResourceConfig.m in Sources */,
-				CB09E419243AE839006E19ED /* NSMutableArray+Filters.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

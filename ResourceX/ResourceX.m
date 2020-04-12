@@ -70,13 +70,10 @@
     self.success = nil;
     
 }
-// 解析服务器的返回数据
-- (void)parseResponse:(id)responseObject {
-    
-    if ([ResourceConfig share].finishedHidenHUD_block)
-        [ResourceConfig share].finishedHidenHUD_block();
-    
-    if ([responseObject isKindOfClass:[NSError class]]) {
+- (BOOL)valiresponseObject:(id)responseObject {
+   
+    BOOL  error = [responseObject isKindOfClass:[NSError class]];
+    if (error) {
         
         NSError *error = responseObject;
         NSString  *code = [NSString stringWithFormat:@"%ld",(long)error.code];
@@ -127,6 +124,17 @@
         }
         if (self.finishedCallBack)
             self.finishedCallBack(responseObject);
+       
+    }
+    return error;
+}
+// 解析服务器的返回数据
+- (void)parseResponse:(id)responseObject {
+    
+    if ([ResourceConfig share].finishedHidenHUD_block)
+        [ResourceConfig share].finishedHidenHUD_block();
+    
+    if ([self valiresponseObject:responseObject]){
         return;
     }
     //加密相关

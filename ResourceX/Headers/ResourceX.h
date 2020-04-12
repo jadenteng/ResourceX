@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ResourceConfig.h"
-#import "NSMutableArray+Filters.h"
+#import "NSArray+Filters.h"
 #import "ResourceConst.h"
 
 @class UIImage;
