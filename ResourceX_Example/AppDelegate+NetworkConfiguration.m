@@ -76,6 +76,19 @@
         return afHeaders;
     }];
     
+    ///  加密 解密相关
+    ///这里配置请求接口时,数据加密
+    [ResourceConfig configerRequestParametersAES:^NSDictionary *(NSString *url, id   parameters) {
+        NSLog(@"<<这里加密接口操作>>");
+        return parameters;
+    }];
+    
+    //服务器解密 这里配置
+    [ResourceConfig configerResponseDecryptor:^id _Nullable(id  response) {
+         NSLog(@"<<解密服务器json数据 返回解密的json>>");
+        return response;
+    }];
+    
     ///-------------------------可选---------------------------
     //配置获取网络失败 提示HUD 可自定义实现 HUD
     [ResourceConfig configer_showErrorHit:^(id  _Nonnull msg, NSInteger tag) {

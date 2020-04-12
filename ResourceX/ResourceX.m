@@ -111,10 +111,33 @@
                 }
         }
         
+        if (!self.isHidden_failure_errorHit) {
+            if ([ResourceConfig share].netWorkErrorHit_block)
+                [ResourceConfig share].netWorkErrorHit_block(responseObject[JT_REDUXDAT_MSG],self.tag);
+            
+        }
+        
+        NSLog(@"%@",responseObject);
+        if (self.failure)
+            self.failure(responseObject);
+        
+        if (self.uploadProgressCallBack) {
+            self.uploadProgressCallBack(0.0f);
+            self.uploadProgressCallBack = nil;
+        }
+        if (self.finishedCallBack)
+            self.finishedCallBack(responseObject);
+        return;
+    }
+    //加密相关
+    if ([ResourceConfig share].responseDecryptor_block) {
+        ///解密json
+        NSDictionary *NESJson = [ResourceConfig share].responseDecryptor_block(responseObject);
+        if (NESJson)
+            responseObject =  NESJson;
     }
     
     NSString *code = [NSString stringWithFormat:@"%@",responseObject[JT_REDUXDAT_CODE]];
-    
     if ([code isEqualToString:JT_REDUXDATCODE_SUCCES_STATE]) {
         if (self.isShow_success_Hit) {
             if ([ResourceConfig share].netWorkErrorHit_block)
@@ -132,9 +155,8 @@
         }
         
         NSLog(@"%@",responseObject);
-        if (self.failure) {
+        if (self.failure)
             self.failure(responseObject);
-        }
         
         if (self.uploadProgressCallBack) {
             self.uploadProgressCallBack(0.0f);

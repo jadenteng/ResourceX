@@ -7,6 +7,7 @@
 //
 
 #import "ResourceX+AFNetworking.h"
+#import "ResourceConfig.h"
 
 @protocol AFMultipartFormDataMethodProtocol <NSObject>
 - (void)appendPartWithFileData:(NSData *)data
@@ -108,7 +109,7 @@ static AFHTTPSessionTool *shareManager = nil;
     
     AFHTTPSessionTool *manager = [AFHTTPSessionTool sharedManager];
     [[manager.AF_sessionManager requestSerializer] setTimeoutInterval:self.timeoutInterval];
-    [manager.AF_sessionManager POST:self.url parameters:parameters headers:[self configerHeaders:parameters] progress:^(NSProgress * _Nonnull uploadProgress) {
+    [manager.AF_sessionManager POST:self.url parameters:[self AES:parameters] headers:[self configerHeaders:parameters] progress:^(NSProgress * _Nonnull uploadProgress) {
         double progress = (double)uploadProgress.completedUnitCount / (double)uploadProgress.totalUnitCount;
         if(self.uploadProgressCallBack)
             self.uploadProgressCallBack(progress);
@@ -126,7 +127,7 @@ static AFHTTPSessionTool *shareManager = nil;
     [self availCachePolicy:parameters];
     AFHTTPSessionTool *manager = [AFHTTPSessionTool sharedManager];
     [[manager.AF_sessionManager requestSerializer] setTimeoutInterval:self.timeoutInterval];
-    [manager.AF_sessionManager GET:self.url parameters:parameters headers:[self configerHeaders:parameters] progress:^(NSProgress * _Nonnull downloadProgress) {
+    [manager.AF_sessionManager GET:self.url parameters:[self AES:parameters] headers:[self configerHeaders:parameters] progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [self saveCache:responseObject];
         [self parseResponse:responseObject];
@@ -191,6 +192,16 @@ static AFHTTPSessionTool *shareManager = nil;
         headers = [AFHTTPSessionTool sharedManager].sessionHeaders(self.url,parameters);
     }
     return headers;
+}
+- (NSDictionary *)AES:(NSDictionary *)parameters {
+    if (self.not_AES_Request) {
+        return parameters;
+    }
+    ///如果配置了加密
+    if ([ResourceConfig share].requestParametersAES_block) {
+       return parameters = [ResourceConfig share].requestParametersAES_block(self.url,parameters);
+    }
+    return parameters;
 }
 - (void)availStartLoadHUD_ainmated {
     if (!self.isNone_HUD_animated) {

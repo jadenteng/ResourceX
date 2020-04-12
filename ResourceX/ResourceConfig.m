@@ -16,6 +16,9 @@ NSString *JT_REDUXDAT_CODE = @"code";
 NSString *JT_REDUXDATCODE_SUCCES_STATE = @"0";
 NSString *JT_BASEK_API_SERVER = @"";
 
+//如果服务器有加密返回数据
+//NSString *JT_EnryptedResponse_Key = @"en_data";
+
 static ResourceConfig *shareinstance = nil;
 
 @implementation ResourceConfig
@@ -51,6 +54,9 @@ static ResourceConfig *shareinstance = nil;
     
     JT_BASEK_API_SERVER = baseApiServer;
 }
+//+ (void)setReduxdat_EnryptedResponse_Key:(NSString *)enryptedResponse_Key {
+//    JT_EnryptedResponse_Key = enryptedResponse_Key;
+//}
 
 + (void)configer_showErrorHit:(NetWorkHitBlock)hit {
     [ResourceConfig share].netWorkErrorHit_block = hit;
@@ -71,6 +77,14 @@ static ResourceConfig *shareinstance = nil;
 }
 + (void)configerSessionHeader:(SessionHeader)headers {
     [AFHTTPSessionTool sharedManager].sessionHeaders = headers;
+}
+
++ (void)configerRequestParametersAES:(SessionHeader)requestParametersAES_block {
+    [ResourceConfig share].requestParametersAES_block = requestParametersAES_block;
+}
+///服务器加密数据 解密json
++ (void)configerResponseDecryptor:(ResponseDecryptor)responseDecryptor_block {
+    [ResourceConfig share].responseDecryptor_block = responseDecryptor_block;
 }
 
 @end

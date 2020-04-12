@@ -16,7 +16,6 @@ typedef void(^RequestCallBack)(id _Nullable responseObject);
 typedef void(^UploadProgressCallBack)(double progress);
 typedef id _Nullable (^Parser)(id _Nullable data);
 
-
 /*!
  @enum
  @brief 缓存策略
@@ -41,6 +40,7 @@ typedef NS_ENUM(NSInteger, JTCachePolicy) {
 @property (nonatomic,assign)BOOL isNone_HUD_animated; //
 @property (nonatomic,assign)BOOL isShow_success_Hit; // 显示获取成功HUD
 
+@property (nonatomic,assign)BOOL not_AES_Request; //不对接口加密
 @property (nonatomic,assign)NSInteger tag; //
 
 

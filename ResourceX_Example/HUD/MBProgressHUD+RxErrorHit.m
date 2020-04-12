@@ -23,14 +23,25 @@
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:window animated:YES];
         hud.translatesAutoresizingMaskIntoConstraints = NO;
         NSLayoutConstraint *hCenter = [hud.centerXAnchor constraintEqualToAnchor:window.centerXAnchor];
-        NSLayoutConstraint *bottom = [hud.bottomAnchor constraintEqualToAnchor:window.safeAreaLayoutGuide.bottomAnchor constant: 10];
-        [NSLayoutConstraint activateConstraints:@[hCenter,bottom]];
+        if (@available(iOS 11.0, *)) {
+            NSLayoutConstraint *bottom = [hud.bottomAnchor constraintEqualToAnchor:window.safeAreaLayoutGuide.bottomAnchor constant: 10];
+            [NSLayoutConstraint activateConstraints:@[hCenter,bottom]];
+        } else {
+            NSLayoutConstraint *bottom = [hud.bottomAnchor constraintEqualToAnchor:window.bottomAnchor constant: 10];
+            // Fallback on earlier versions
+            [NSLayoutConstraint activateConstraints:@[hCenter,bottom]];
+        }
         
         hud.userInteractionEnabled = NO;
         hud.mode = MBProgressHUDModeText;
         hud.detailsLabel.text = hint;
         hud.detailsLabel.font = [UIFont systemFontOfSize:14.0];
-        hud.detailsLabel.textColor = UIColor.labelColor;
+        if (@available(iOS 13.0, *)) {
+            hud.detailsLabel.textColor = UIColor.labelColor;
+        } else {
+            hud.detailsLabel.textColor = UIColor.blackColor;
+            // Fallback on earlier versions
+        }
         hud.removeFromSuperViewOnHide = YES;
         hud.margin = 10.0;
         hud.bezelView.layer.cornerRadius = 5;
