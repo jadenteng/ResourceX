@@ -6,12 +6,9 @@
 <p align="center">
 
 <a href="https://github.com/JadenTeng/ResourceX">
-<img src="https://travis-ci.com/JadenTeng/ResourceCryptor.svg?branch=master">
+<img src="https://travis-ci.com/JadenTeng/ResourceX.svg?branch=master">
 </a>
 
-<a href="https://codecov.io/gh/JadenTeng/ResourceX">
-<img src="https://codecov.io/gh/JadenTeng/ResourceCryptor/branch/master/graph/badge.svg" />
-</a>
 
 <a href="https://github.com/Carthage/Carthage/">
 <img src="https://img.shields.io/badge/Carthage-Compatible-4BC51D">
