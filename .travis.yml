@@ -1,0 +1,20 @@
+
+os: osx
+language: objective-c
+osx_image: xcode11.3
+env:
+- DESTINATION="OS=13.3,name=iPhone 11" SCHEME="ResourceX" SDK=iphonesimulator
+
+dependencies:
+  pre:
+    - xcrun instruments -w 'iPhone 11 (13.3)' || sleep 15
+  
+script:
+    - xcodebuild -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug test
+after_success:
+  - sleep 5
+ 
+  
+notifications:
+  email:
+    - 781232284@qq.com
