@@ -22,6 +22,36 @@
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
 }
+- (void)testAraryFiletr {
+   NSArray *list = @[@1,@2,@3];
+    NSMutableArray *mapl = [list filter:^BOOL(id num) {
+        return [num integerValue] > 2;
+    }];
+    XCTAssertNotNil(mapl);
+    NSInteger num = [mapl.firstObject integerValue];
+    XCTAssertEqual(num, 3);
+}
+- (void)testAraryforEach {
+   NSArray *list = @[@1,@2,@3];
+    [list forEach:^(id _Nonnull num) {
+        
+    }];
+   
+    [list forEachIndex:^(id _Nonnull num, NSUInteger idx) {
+        
+    }];
+    XCTAssertNotNil(list);
+
+}
+
+- (void)testAraryMap {
+   NSArray *list = @[@1,@2,@3];
+   NSMutableArray *mapl = [list map:^id _Nonnull(id num) {
+       return num;
+    }];
+    XCTAssertNotNil(mapl);
+    XCTAssertEqual([list count], [mapl count]);
+}
 
 - (void)testExample {
     // This is an example of a functional test case.

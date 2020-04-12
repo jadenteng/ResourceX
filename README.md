@@ -21,7 +21,7 @@
 </P>
 
 
-## `ResourceX` 通过AFNetworking、YYModel 解析网络泛型编程简化网络请求 
+## `ResourceX` 通过`AFNetworking、YYModel` 解析网络泛型编程简化网络请求 
 
 现如今，网络通信几乎涉及每一个app程序。对于绝大多数请求HTTP API的方法,它们的执行流程都可以分成三个不同的阶段。
 这种代码通常有三个特点：
