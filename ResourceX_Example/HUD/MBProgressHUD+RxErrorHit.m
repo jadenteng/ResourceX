@@ -28,7 +28,6 @@
             [NSLayoutConstraint activateConstraints:@[hCenter,bottom]];
         } else {
             NSLayoutConstraint *bottom = [hud.bottomAnchor constraintEqualToAnchor:window.bottomAnchor constant: 10];
-            // Fallback on earlier versions
             [NSLayoutConstraint activateConstraints:@[hCenter,bottom]];
         }
         
