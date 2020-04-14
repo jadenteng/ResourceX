@@ -65,7 +65,6 @@ static AFHTTPSessionTool *shareManager = nil;
     return shareManager;
 }
 
-
 ///.如果发现当前计算得到的成本超过总成本,那么会自动开启一个回收过程,把之前的数据删除
 - (NSCache *)cache {
     if (_cache == nil) {
@@ -120,7 +119,6 @@ static AFHTTPSessionTool *shareManager = nil;
         [self parseResponse:error];
     }];
 }
-
 
 - (void)GET_AF:(id _Nullable)parameters {
     [self availStartLoadHUD_ainmated];

@@ -133,7 +133,7 @@ if (tag == 1) {
 pod 'ResourceX'  
 ```
 ```ruby
-pod 'ResourceX', '1.2.2'
+pod 'ResourceX', '1.2.4'
 ```  
 #### Carthage
 ```objective-c
@@ -177,6 +177,7 @@ return [NSString stringWithFormat:@"%@",num];}];
 上面这行代码，和之前那段for循环执行的结果是相同的。显然，它比for循环更具表现力，并且也能把我们期望的结果定义成对象。当然，map并不是什么魔法，无非就是把for循环执行的逻辑，封装在了函数里，这样我们就可以把函数的返回值赋值给常量了
 
 ###  Release Notes 最近更新     
+- 1.2.4 优化数据返回格式错误,demo添加请求错误
 - 1.2.2 添加服务加密解密方式 demo
 - 1.2.1 新增上传图片根据压缩kb上传 Demo优化
 - 1.2 

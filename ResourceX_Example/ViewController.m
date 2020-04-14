@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
+    
 }
 
 - (void)initJsonUrl {
@@ -173,7 +173,7 @@
 - (void)isRSADES {
     
     ResourceX *netApi = [ResourceX yy_array_url:@"AES" decoder:Episodes.class by:@"episodes"];
-
+    
     [netApi GET_AF:@{@"key":@"hello"}];
     
     [netApi callbackSuccess:^(id  _Nullable responseObject) {
@@ -203,6 +203,27 @@
     }];
 }
 
+- (void)isfailure {
+    
+    ResourceX *netApi = [ResourceX yy_array_url:@"xxx" decoder:Episodes.class by:@"episodes"];
+    netApi.isEncrypt_Param = NO;
+    netApi.isDecode_Response = NO;
+    [netApi GET_AF:@{@"key":@"hello"}];
+    
+    netApi.failure = ^(id  _Nullable responseObject) {
+        NSLog(@"failure:%@",responseObject);
+    };
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+       
+        ResourceX *netApi2 = [ResourceX url:@"xx"];
+        netApi2.basekApiServer = @"http://ssss";
+        [netApi2 GET_AF:nil];
+        netApi2.failure = ^(id  _Nullable responseObject) {
+            NSLog(@"failure:%@",responseObject);
+        };
+    });
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.row) {
@@ -232,6 +253,11 @@
             break;
         case 8: ///
             [self isRSADES];
+            break;
+            
+        case 9: ///
+            
+            [self isfailure];
             break;
             
         default:

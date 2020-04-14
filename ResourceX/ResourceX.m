@@ -70,42 +70,34 @@
     self.success = nil;
     
 }
-- (BOOL)valiresponseObject:(id)responseObject {
-   
+- (BOOL)isErrorResponseObjectt:(id)responseObject {
+    
     BOOL  error = [responseObject isKindOfClass:[NSError class]];
     if (error) {
         
         NSError *error = responseObject;
         NSString  *code = [NSString stringWithFormat:@"%ld",(long)error.code];
         NSDictionary *result = error.userInfo;
+        
         if (error.code == 404) {
             // 资源不存在
-            responseObject = @{JT_REDUXDATA_KEY: result, JT_REDUXDAT_MSG: @"服务器异常", JT_REDUXDAT_CODE: code};
+            responseObject = @{JT_REDUXDATA_KEY: result, JT_REDUXDAT_MSG: @"您访问的资源不存在", JT_REDUXDAT_CODE: code};
         } else if (error.code == -1001) {
             // 请求超时
             responseObject = @{JT_REDUXDATA_KEY: result, JT_REDUXDAT_MSG: @"请求超时", JT_REDUXDAT_CODE: code};
             
         } else {
             
-            if (error.code == -1004) {
-                responseObject = @{JT_REDUXDATA_KEY: result, JT_REDUXDAT_MSG: @"未能连接到服务器", JT_REDUXDAT_CODE: code};
-            } else
-                if (error.code == -1003 ||  error.code == -1200) {
-                    
-                    responseObject = @{JT_REDUXDATA_KEY: result, JT_REDUXDAT_MSG: @"当前网络不稳定,无法连接服务器", JT_REDUXDAT_CODE: code};
-                    
-                } else if (error.code == -1011  ) {
-                    
-                    responseObject = @{JT_REDUXDATA_KEY: result, JT_REDUXDAT_MSG: @"服务器连接无响应", JT_REDUXDAT_CODE: code};
-                }
-                else if ( error.code == -1009 ) {
-                    
-                    
-                    responseObject = @{JT_REDUXDATA_KEY: result, JT_REDUXDAT_MSG: @"当前网络未连接", JT_REDUXDAT_CODE: code};
-                } else {
-                    
-                    responseObject = @{JT_REDUXDATA_KEY: result, JT_REDUXDAT_MSG:[NSString stringWithFormat:@"未知异常错误无法访问数据,code=%@",code] , JT_REDUXDAT_CODE: code};
-                }
+            if ((error.code == -1004) || (error.code == -1001) || (error.code == -1003)) {
+                responseObject = @{JT_REDUXDATA_KEY: result, JT_REDUXDAT_MSG: @"网络连接失败,未能连接到服务器", JT_REDUXDAT_CODE: code};
+            } else {
+                
+                NSCharacterSet *set = [NSCharacterSet characterSetWithCharactersInString:@".。!！"];
+                NSString *errorDescription = error.localizedDescription;
+                errorDescription = [errorDescription stringByTrimmingCharactersInSet:set];
+                
+                responseObject = @{JT_REDUXDATA_KEY: result, JT_REDUXDAT_MSG:[NSString stringWithFormat:@"%@,code=%@",errorDescription,code] , JT_REDUXDAT_CODE: code};
+            }
         }
         
         if (!self.isHidden_failure_errorHit) {
@@ -114,7 +106,6 @@
             
         }
         
-        NSLog(@"%@",responseObject);
         if (self.failure)
             self.failure(responseObject);
         
@@ -122,61 +113,76 @@
             self.uploadProgressCallBack(0.0f);
             self.uploadProgressCallBack = nil;
         }
+        
         if (self.finishedCallBack)
             self.finishedCallBack(responseObject);
-       
     }
     return error;
 }
+/// 是否有加密
+- (id)isResponse_DE:(id)responseObject {
+    
+    if ([ResourceConfig share].response_DE_block && self.isDecode_Response) {
+        ///解密json
+        NSDictionary *en_data = [ResourceConfig share].response_DE_block(responseObject);
+        if (en_data)
+            responseObject =  en_data;
+        return responseObject;
+    }
+    return responseObject;
+}
+///请求成功回调
+- (void)isSuccess:(id)responseObject {
+    
+    if (self.isShow_success_Hit) {
+        if ([ResourceConfig share].netWorkErrorHit_block)
+            [ResourceConfig share].netWorkSuccessHit_block(responseObject[JT_REDUXDAT_MSG], self.tag);
+    }
+    if (self.success)
+        self.success(self.parser(responseObject));
+}
+/// 失败回调
+- (void)isFailure:(id)responseObject {
+    if (!responseObject) {
+       responseObject = @{JT_REDUXDATA_KEY: @"", JT_REDUXDAT_MSG:@"没有数据!" , JT_REDUXDAT_CODE: @"-10000"};
+    }
+    if (!self.isHidden_failure_errorHit) {
+        if ([ResourceConfig share].netWorkErrorHit_block)
+            [ResourceConfig share].netWorkErrorHit_block(responseObject[JT_REDUXDAT_MSG],self.tag);
+    }
+    
+    if (self.failure)
+        self.failure(responseObject);
+    
+    if (self.uploadProgressCallBack) {
+        self.uploadProgressCallBack(0.0f);
+        self.uploadProgressCallBack = nil;
+    }
+}
+
 // 解析服务器的返回数据
 - (void)parseResponse:(id)responseObject {
     
     if ([ResourceConfig share].finishedHidenHUD_block)
         [ResourceConfig share].finishedHidenHUD_block();
     
-    if ([self valiresponseObject:responseObject]){
+    ///请求错误相关
+    if ([self isErrorResponseObjectt:responseObject]){
         return;
     }
     //加密相关
-    if ([ResourceConfig share].response_DE_block && self.isDecode_Response) {
-        ///解密json
-        NSDictionary *en_data = [ResourceConfig share].response_DE_block(responseObject);
-        if (en_data)
-            responseObject =  en_data;
-    }
-    
+    responseObject = [self isResponse_DE:responseObject];
     NSString *code = [NSString stringWithFormat:@"%@",responseObject[JT_REDUXDAT_CODE]];
+    ///失败或者成功
     if ([code isEqualToString:JT_REDUXDATCODE_SUCCES_STATE]) {
-        if (self.isShow_success_Hit) {
-            if ([ResourceConfig share].netWorkErrorHit_block)
-                [ResourceConfig share].netWorkSuccessHit_block(responseObject[JT_REDUXDAT_MSG], self.tag);
-        }
-        if (self.success) {
-            self.success(self.parser(responseObject));
-        }
+        [self isSuccess:responseObject];
     } else {
-        
-        if (!self.isHidden_failure_errorHit) {
-            if ([ResourceConfig share].netWorkErrorHit_block)
-                [ResourceConfig share].netWorkErrorHit_block(responseObject[JT_REDUXDAT_MSG],self.tag);
-            
-        }
-        
-        NSLog(@"%@",responseObject);
-        if (self.failure)
-            self.failure(responseObject);
-        
-        if (self.uploadProgressCallBack) {
-            self.uploadProgressCallBack(0.0f);
-            self.uploadProgressCallBack = nil;
-        }
+        [self isFailure:responseObject];
     }
     
     if (self.finishedCallBack)
         self.finishedCallBack(responseObject);
-    
     //  [self cancelOperation];
-    
 }
 
 @end
@@ -237,7 +243,6 @@
     
     return udidStr;
 }
-
 
 + (NSData *)scaleDataImage:(UIImage *)image toKb:(NSInteger)kb{
     

@@ -106,6 +106,7 @@
     ///-------------------------可选---------------------------
     //配置获取网络失败 提示HUD 可自定义实现 HUD
     [ResourceConfig configer_showErrorHit:^(id  _Nonnull msg, NSInteger tag) {
+        
         [MBProgressHUD showAutoHudInWindow:msg];
     }];
     //配置获取网络成功 提示HUD

@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// json对象
 + (ResourceX *)url:(NSString *)url;
++ (ResourceX *)url:(NSString *)url by:(NSString *)key;
+
 + (ResourceX *)jsonUrl:(NSString *)url;
 + (ResourceX *)jsonUrl:(NSString *)url by:(NSString *)key;
 

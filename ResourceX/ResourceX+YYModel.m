@@ -23,6 +23,9 @@
 + (ResourceX *)url:(NSString *)url {
     return [[self alloc] initJsonUrl:url];
 }
++ (ResourceX *)url:(NSString *)url by:(NSString *)key {
+    return [[self alloc] initJsonUrl:url by:key];
+}
 + (ResourceX *)jsonUrl:(NSString *)url {
     return [[self alloc] initJsonUrl:url];
 }
