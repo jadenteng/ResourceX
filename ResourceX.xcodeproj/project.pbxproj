@@ -33,13 +33,13 @@
 		CB278E7624434CC700B98C1F /* NSArray+Filters.h in Headers */ = {isa = PBXBuildFile; fileRef = CB278E7424434CC700B98C1F /* NSArray+Filters.h */; };
 		CB278E7724434CC700B98C1F /* NSArray+Filters.m in Sources */ = {isa = PBXBuildFile; fileRef = CB278E7524434CC700B98C1F /* NSArray+Filters.m */; };
 		CB388DE6243CB85500A5AFB6 /* ResourceConst.h in Headers */ = {isa = PBXBuildFile; fileRef = CB388DE5243CB85500A5AFB6 /* ResourceConst.h */; };
-		CBB3F90024445001008DE987 /* ResourceCryptor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3F8FF24445001008DE987 /* ResourceCryptor.framework */; };
-		CBB3F90124445002008DE987 /* ResourceCryptor.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3F8FF24445001008DE987 /* ResourceCryptor.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CBBC7DD1243C1868007E3FFF /* YYModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D1243B595E006E19ED /* YYModel.framework */; };
 		CBBC7DD2243C1868007E3FFF /* YYModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D1243B595E006E19ED /* YYModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CBBC7DD3243C2457007E3FFF /* ResourceX+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E450243AF259006E19ED /* ResourceX+AFNetworking.m */; };
 		CBBC7DD4243C279F007E3FFF /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D2243B595E006E19ED /* AFNetworking.framework */; };
 		CBBC7DD5243C279F007E3FFF /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D2243B595E006E19ED /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CBD0774E2445AF410030DE39 /* ResourceCryptor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3F8FF24445001008DE987 /* ResourceCryptor.framework */; };
+		CBD0774F2445AF410030DE39 /* ResourceCryptor.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3F8FF24445001008DE987 /* ResourceCryptor.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +67,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				CBBC7DD2243C1868007E3FFF /* YYModel.framework in Embed Frameworks */,
-				CBB3F90124445002008DE987 /* ResourceCryptor.framework in Embed Frameworks */,
+				CBD0774F2445AF410030DE39 /* ResourceCryptor.framework in Embed Frameworks */,
 				CBBC7DD5243C279F007E3FFF /* AFNetworking.framework in Embed Frameworks */,
 				CB09E4D9243B595E006E19ED /* MBProgressHUD.framework in Embed Frameworks */,
 				CB09E4C2243B4E28006E19ED /* ResourceX.framework in Embed Frameworks */,
@@ -136,7 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBBC7DD1243C1868007E3FFF /* YYModel.framework in Frameworks */,
-				CBB3F90024445001008DE987 /* ResourceCryptor.framework in Frameworks */,
+				CBD0774E2445AF410030DE39 /* ResourceCryptor.framework in Frameworks */,
 				CBBC7DD4243C279F007E3FFF /* AFNetworking.framework in Frameworks */,
 				CB09E4D8243B595E006E19ED /* MBProgressHUD.framework in Frameworks */,
 				CB09E4C1243B4E28006E19ED /* ResourceX.framework in Frameworks */,
