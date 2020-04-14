@@ -13,7 +13,7 @@
 #import "Episodes.h"
 #import "LoginModel.h"
 #import "PelistInfoModel.h"
-
+#import <ResourceCryptor/ResourceCryptor.h>
 @interface ViewController ()
 @end
 
@@ -21,17 +21,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+  
 }
 
 - (void)initJsonUrl {
     
-   
     ResourceX *netApi = [ResourceX jsonUrl:@"exmple/dict"];
     netApi.timeoutInterval = 15;
-   
+    
     [netApi GET_AF:nil];
-   
+    
     netApi.success = ^(id  _Nullable responseObject) {
         NSLog(@"转换数据:%@",responseObject);
     };
@@ -159,7 +158,7 @@
     netApi.cachePolicy = eCachePolicy_NotHandle;
     netApi.isNone_HUD_animated = YES; ///设置不需要加载HUD
     netApi.isHidden_failure_errorHit = YES;// 设置当请求发送错误是不需要提示HUD
-   
+    
     [netApi GET_AF:@{}];
     [netApi callbackSuccess:^(id  _Nullable responseObject) {
         NSLog(@"转换数据%@",responseObject);
@@ -169,6 +168,40 @@
     }];
 }
 
+
+/// 配置的加密 在AppDelegate+NetworkConfiguration.m 文件
+- (void)isRSADES {
+    
+    ResourceX *netApi = [ResourceX yy_array_url:@"AES" decoder:Episodes.class by:@"episodes"];
+
+    [netApi GET_AF:@{@"key":@"hello"}];
+    
+    [netApi callbackSuccess:^(id  _Nullable responseObject) {
+        
+    } failure:^(id  _Nullable responseObject) {
+    } finished:^(id  _Nullable responseObject) {
+        NSLog(@"源数据:%@",responseObject);
+    }];
+    
+    [self isAES_NO];
+}
+/// 配置的加密 在AppDelegate+NetworkConfiguration.m 文件
+- (void)isAES_NO {
+    
+    ResourceX *netApi = [ResourceX yy_array_url:@"episodes" decoder:Episodes.class by:@"episodes"];
+    /// 注: 如果没有配置configer_RequestEncrypt方法 不需要设置isEncrypt_Param
+    ///              configer_RequestEncrypt    不需要设置isDecode_Response
+    netApi.isEncrypt_Param = NO; //设置参数不进行加密
+    netApi.isDecode_Response = NO; //设置服务器返回数据不需要解密
+    [netApi GET_AF:@{@"key":@"hello"}];
+    
+    [netApi callbackSuccess:^(id  _Nullable responseObject) {
+        
+    } failure:^(id  _Nullable responseObject) {
+    } finished:^(id  _Nullable responseObject) {
+        NSLog(@"源数据:%@",responseObject);
+    }];
+}
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -196,6 +229,9 @@
             break;
         case 7: ///
             [self isHUD_animated];
+            break;
+        case 8: ///
+            [self isRSADES];
             break;
             
         default:

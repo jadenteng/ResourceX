@@ -194,12 +194,15 @@ static AFHTTPSessionTool *shareManager = nil;
     return headers;
 }
 - (NSDictionary *)AES:(NSDictionary *)parameters {
-    if (self.not_AES_Request) {
+    if (!self.isEncrypt_Param) {
         return parameters;
     }
+    if (!parameters) {
+        parameters = @{};
+    }
     ///如果配置了加密
-    if ([ResourceConfig share].requestParametersAES_block) {
-       return parameters = [ResourceConfig share].requestParametersAES_block(self.url,parameters);
+    if ([ResourceConfig share].param_EN_block) {
+       return parameters = [ResourceConfig share].param_EN_block(self.url,parameters);
     }
     return parameters;
 }

@@ -138,11 +138,11 @@
         return;
     }
     //加密相关
-    if ([ResourceConfig share].responseDecryptor_block) {
+    if ([ResourceConfig share].response_DE_block && self.isDecode_Response) {
         ///解密json
-        NSDictionary *NESJson = [ResourceConfig share].responseDecryptor_block(responseObject);
-        if (NESJson)
-            responseObject =  NESJson;
+        NSDictionary *en_data = [ResourceConfig share].response_DE_block(responseObject);
+        if (en_data)
+            responseObject =  en_data;
     }
     
     NSString *code = [NSString stringWithFormat:@"%@",responseObject[JT_REDUXDAT_CODE]];

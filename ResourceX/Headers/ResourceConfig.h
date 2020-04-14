@@ -44,10 +44,12 @@ typedef id _Nullable (^ResponseDecryptor)(id _Nullable response);
 
 @property (nonatomic,copy)NetWorkHitBlock netWorkErrorHit_block; //net return failure hit Block
 @property (nonatomic,copy)NetWorkHitBlock netWorkSuccessHit_block; //net return success hit Block
-@property (nonatomic,copy)ResponseDecryptor responseDecryptor_block; //
+@property (nonatomic,copy)ResponseDecryptor response_DE_block; //
 
-@property (nonatomic,copy)SessionHeader requestParametersAES_block; //数据请求加密
+@property (nonatomic,copy)SessionHeader param_EN_block; //数据请求加密
 
+//@property (nonatomic,assign)BOOL setParamEncrypt; //设置请求参数加密 默认不设置
+//@property (nonatomic,assign)BOOL setResponseDecode; //设置返回数据解密 默认不设置
 
 
 @property (nonatomic,copy)dispatch_block_t finishedHidenHUD_block; //
@@ -73,9 +75,10 @@ typedef id _Nullable (^ResponseDecryptor)(id _Nullable response);
 + (void)configerAFHTTPSessionManager:(ConfigerAFSessionManager)httpSssionManager;
 + (void)configerSessionHeader:(SessionHeader)headers;
 
-+ (void)configerRequestParametersAES:(SessionHeader)requestParametersAES_block;
-///服务器加密数据 解密json
-+ (void)configerResponseDecryptor:(ResponseDecryptor)responseDecryptor_block;
+///请求参数加密
++ (void)configer_RequestEncrypt:(SessionHeader)param_EN_block;
+///服务器数据解密
++ (void)configer_ResponseDecode:(ResponseDecryptor)response_DE_block;
 
 @end
 

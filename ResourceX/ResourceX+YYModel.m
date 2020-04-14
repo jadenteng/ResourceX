@@ -52,6 +52,8 @@
 {
     self = [super init];
     if (self) {
+        self.isDecode_Response = YES;
+        self.isEncrypt_Param = YES;
         self.parser = ^id _Nullable(id  _Nonnull data) {
             return  [ResourceX reduxData:data];
         };
@@ -63,6 +65,8 @@
 {
     self = [super init];
     if (self) {
+        self.isDecode_Response = YES;
+        self.isEncrypt_Param = YES;
         self.url = url;
         self.parser = ^id _Nullable(id  _Nonnull data) {
             return  [ResourceX reduxData:data];
@@ -74,6 +78,8 @@
 - (instancetype)initJsonUrl:(NSString *)url by:(NSString *)key {
     self = [super init];
     if (self) {
+        self.isDecode_Response = YES;
+        self.isEncrypt_Param = YES;
         self.url = url;
         self.parser = ^id _Nullable(id  _Nonnull data) {
             return  [[ResourceX reduxData:data] valueForKeyPath:key];
@@ -86,6 +92,8 @@
 {
     self = [super init];
     if (self) {
+        self.isDecode_Response = YES;
+        self.isEncrypt_Param = YES;
         self.url = url;
         self.parser = ^id _Nullable(id  _Nonnull data) {
             return  [ResourceX reduxdeData:[ResourceX reduxData:data] coderClass:decoderClass];
@@ -98,6 +106,8 @@
 {
     self = [super init];
     if (self) {
+        self.isDecode_Response = YES;
+        self.isEncrypt_Param = YES;
         self.url = url;
         self.parser = ^id _Nullable(id  _Nonnull data) {
             
@@ -111,6 +121,8 @@
 - (instancetype)initArrayJsonModel:(NSString *)url decoder:(Class )decoderClass{
     self = [super init];
     if (self) {
+        self.isDecode_Response = YES;
+        self.isEncrypt_Param = YES;
         self.url = url;
         self.parser = ^id _Nullable(id  _Nonnull data) {
             
@@ -125,6 +137,8 @@
 {
     self = [super init];
     if (self) {
+        self.isDecode_Response = YES;
+        self.isEncrypt_Param = YES;
         self.url = url;
         self.parser = ^id _Nullable(id  _Nonnull data) {
             
@@ -137,6 +151,8 @@
 - (instancetype)initMutableArrayJsonModel:(NSString *)url decoder:(Class )decoderClass by:(NSString *)key {
     self = [super init];
     if (self) {
+        self.isDecode_Response = YES;
+        self.isEncrypt_Param = YES;
         self.url = url;
         self.parser = ^id _Nullable(id  _Nonnull data) {
             
@@ -149,6 +165,8 @@
 - (instancetype)initMutableArrayJsonModel:(NSString *)url decoder:(Class )decoderClass {
     self = [super init];
     if (self) {
+        self.isDecode_Response = YES;
+        self.isEncrypt_Param = YES;
         self.url = url;
         self.parser = ^id _Nullable(id  _Nonnull data) {
             

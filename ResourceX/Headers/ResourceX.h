@@ -40,7 +40,9 @@ typedef NS_ENUM(NSInteger, JTCachePolicy) {
 @property (nonatomic,assign)BOOL isNone_HUD_animated; //
 @property (nonatomic,assign)BOOL isShow_success_Hit; // 显示获取成功HUD
 
-@property (nonatomic,assign)BOOL not_AES_Request; //不对接口加密
+@property (nonatomic,assign)BOOL isEncrypt_Param; /// 设置接口参数是否需要加密 默认YES
+@property (nonatomic,assign)BOOL isDecode_Response; /// 设置是否需要解密返回数据 默认YES
+
 @property (nonatomic,assign)NSInteger tag; //
 
 

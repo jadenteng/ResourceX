@@ -103,7 +103,30 @@ if (tag == 1) {
 ```
 ### 请求加密RSA DES 加解密 
 - 传送门[ResourceCryptor](https://github.com/JadenTeng/ResourceCryptor)
+```objective-c
 
+//1. 如果项目需要请求参数需要加密 实现此方法  加密服务器参数
+[ResourceConfig configer_RequestEncrypt:^NSDictionary *(NSString *url, NSDictionary   *parameters) {
+    /// 将parameters转为utf8 data 或者 jsonstring
+    NSData *data = parameters.json_Data_utf8;
+    /// 将utf8 data 进行DES 加密z 转换为 base64字符串
+    NSDictionary *en_data = @{@"en_data":data.EN_DES(key,iv).base64_encoded_string};
+   /// NSLog(@"%@",en_data);
+    return en_data;
+ }];
+ 
+//2. 解密服务器数据
+[ResourceConfig configer_ResponseDecode:^id _Nullable(NSDictionary  *response) {
+    NSLog(@"==解密服务器json数据===");
+    //1. 先获取服务器解密的数据文本
+     NSString *de_data = response[@"en_data"];
+     if (de_data) { 
+         NSString *de_str = de_data.DE_AES(key, iv);
+         return de_str.JSON_Object;//将解密的json对象返回给RX
+    }
+    return response;
+ }];
+```
 ### Installation 安装
 #### CocoaPods
 ```ruby

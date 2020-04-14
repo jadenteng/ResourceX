@@ -13,7 +13,8 @@
 #import "MBProgressHUD+RxErrorHit.h"
 #import <AFNetworking/AFNetworking.h>
 
-#define FormatTime(date) [NSString stringWithFormat:@"%.0lf",([date timeIntervalSince1970]*1000)]
+//如果有加密的需求r导入 pod 'ResourceCryptor' 或者 github "JadenTeng/ResourceCryptor"
+#import <ResourceCryptor/ResourceCryptor.h>
 
 @implementation AppDelegate (NetworkConfiguration)
 
@@ -30,6 +31,9 @@
      }
      */
     
+    /// 注:这里我把数据返回的格式暴露给用户自己设定
+    ///    把数据返回的格式相关进行设置,因为不同公司服务器的返回数据格式不同
+    
     //配置服务器返回字典的key
     [ResourceConfig setReduxdata_Code:@"code"];
     [ResourceConfig setReduxdata_Key:@"result"];
@@ -43,7 +47,7 @@
     //配置主api
     [ResourceConfig setBasek_Api_Server:@"http://mock-api.com/bKkO5MKB.mock"];
     
-    ///设置 AFHTTPSessionManager
+    ///设置 AFHTTPSessionManager 需要导入AFNetworking 4.0以上版本
     [ResourceConfig configerAFHTTPSessionManager: ^AFHTTPSessionManager *{
         
         AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -55,37 +59,47 @@
         return manager;
     }];
     
-    //配置AF sessionHeaders *服务器header需要的参数设置
+    //配置AF sessionHeaders *一般服务器都会设置请求header参数 如果没有header参数设置可不实现此方法
     [ResourceConfig configerSessionHeader:^ NSDictionary * (NSString *url,id _Nullable parmas){
         
-        NSString *accountId = @"" ;
-        NSString *userToken = @"" ;
-        NSString *timestamp = FormatTime([NSDate date]);
-        NSString *idfa = @"";
         NSDictionary *afHeaders = @{@"sign":@"xxxx",
-                                    @"devicetoken":idfa,
-                                    @"dataToken":idfa,
-                                    @"accountId":accountId,
-                                    @"userToken":userToken,
-                                    @"timestamp":timestamp,
-                                    @"ostype":@"iOS",
-                                    @"appType":@"",
-                                    @"packageCode":@"HQD"
+                                    @"userToken":@"TokenXXX",
+                                    @"appType":@"iOS",
+        
         };
         // NSLog(@"%@\n%@",url,afHeaders);
         return afHeaders;
     }];
     
-    ///  加密 解密相关
-    ///这里配置请求接口时,数据加密
-    [ResourceConfig configerRequestParametersAES:^NSDictionary *(NSString *url, id   parameters) {
-        NSLog(@"<<这里加密接口操作>>");
-        return parameters;
+     #define key              @"iojyxgas+x*$a$*s"
+     #define iv               @"bbc077ccff5c1ab8"
+    ///-------------------------针对加密 请求参数 服务返回数据解密 ---------------------------
+    /// 如果项目需要请求参数需要加密 实现此方法
+    [ResourceConfig configer_RequestEncrypt:^NSDictionary *(NSString *url, NSDictionary   *parameters) {
+    
+        NSLog(@"===请求参数加密操作===");
+        /// 将parameters转为utf8 data 或者 jsonstring
+        NSData *data = parameters.json_Data_utf8;
+        /// 将utf8 data 进行DES 加密z 转换为 base64字符串
+        NSDictionary *en_data = @{@"en_data":data.EN_DES(key,iv).base64_encoded_string};
+       /// NSLog(@"%@",en_data);
+        return en_data;
     }];
     
-    //服务器解密 这里配置
-    [ResourceConfig configerResponseDecryptor:^id _Nullable(id  response) {
-         NSLog(@"<<解密服务器json数据 返回解密的json>>");
+    ///如果需要服务器返回数据解密 这里配置 如果服务器返回的数据需要解密在实现此方法
+    [ResourceConfig configer_ResponseDecode:^id _Nullable(NSDictionary  *response) {
+        NSLog(@"==解密服务器json数据===");
+        //先获取服务器解密的数据文本
+         NSString *de_data = response[@"en_data"];
+         if (de_data) {
+             /// 解密前的数据
+             NSLog(@"解密前:%@",response);
+    
+             NSString *de_str = de_data.DE_AES(key, iv);
+             NSLog(@"解密后:%@",de_str.JSON_Object);
+             return de_str.JSON_Object;
+        }
+
         return response;
     }];
     

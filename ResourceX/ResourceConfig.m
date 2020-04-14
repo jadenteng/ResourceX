@@ -79,12 +79,12 @@ static ResourceConfig *shareinstance = nil;
     [AFHTTPSessionTool sharedManager].sessionHeaders = headers;
 }
 
-+ (void)configerRequestParametersAES:(SessionHeader)requestParametersAES_block {
-    [ResourceConfig share].requestParametersAES_block = requestParametersAES_block;
++ (void)configer_RequestEncrypt:(SessionHeader)param_EN_block {
+    [ResourceConfig share].param_EN_block = param_EN_block;
 }
 ///服务器加密数据 解密json
-+ (void)configerResponseDecryptor:(ResponseDecryptor)responseDecryptor_block {
-    [ResourceConfig share].responseDecryptor_block = responseDecryptor_block;
++ (void)configer_ResponseDecode:(ResponseDecryptor)response_DE_block {
+    [ResourceConfig share].response_DE_block = response_DE_block;
 }
 
 @end

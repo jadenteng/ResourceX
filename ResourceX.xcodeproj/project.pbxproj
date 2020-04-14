@@ -33,6 +33,8 @@
 		CB278E7624434CC700B98C1F /* NSArray+Filters.h in Headers */ = {isa = PBXBuildFile; fileRef = CB278E7424434CC700B98C1F /* NSArray+Filters.h */; };
 		CB278E7724434CC700B98C1F /* NSArray+Filters.m in Sources */ = {isa = PBXBuildFile; fileRef = CB278E7524434CC700B98C1F /* NSArray+Filters.m */; };
 		CB388DE6243CB85500A5AFB6 /* ResourceConst.h in Headers */ = {isa = PBXBuildFile; fileRef = CB388DE5243CB85500A5AFB6 /* ResourceConst.h */; };
+		CBB3F90024445001008DE987 /* ResourceCryptor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3F8FF24445001008DE987 /* ResourceCryptor.framework */; };
+		CBB3F90124445002008DE987 /* ResourceCryptor.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3F8FF24445001008DE987 /* ResourceCryptor.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CBBC7DD1243C1868007E3FFF /* YYModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D1243B595E006E19ED /* YYModel.framework */; };
 		CBBC7DD2243C1868007E3FFF /* YYModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D1243B595E006E19ED /* YYModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CBBC7DD3243C2457007E3FFF /* ResourceX+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E450243AF259006E19ED /* ResourceX+AFNetworking.m */; };
@@ -65,6 +67,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				CBBC7DD2243C1868007E3FFF /* YYModel.framework in Embed Frameworks */,
+				CBB3F90124445002008DE987 /* ResourceCryptor.framework in Embed Frameworks */,
 				CBBC7DD5243C279F007E3FFF /* AFNetworking.framework in Embed Frameworks */,
 				CB09E4D9243B595E006E19ED /* MBProgressHUD.framework in Embed Frameworks */,
 				CB09E4C2243B4E28006E19ED /* ResourceX.framework in Embed Frameworks */,
@@ -117,6 +120,7 @@
 		CB278E7424434CC700B98C1F /* NSArray+Filters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Filters.h"; sourceTree = "<group>"; };
 		CB278E7524434CC700B98C1F /* NSArray+Filters.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Filters.m"; sourceTree = "<group>"; };
 		CB388DE5243CB85500A5AFB6 /* ResourceConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResourceConst.h; sourceTree = "<group>"; };
+		CBB3F8FF24445001008DE987 /* ResourceCryptor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ResourceCryptor.framework; path = ResourceX_Example/ResourceCryptor.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBBC7DD1243C1868007E3FFF /* YYModel.framework in Frameworks */,
+				CBB3F90024445001008DE987 /* ResourceCryptor.framework in Frameworks */,
 				CBBC7DD4243C279F007E3FFF /* AFNetworking.framework in Frameworks */,
 				CB09E4D8243B595E006E19ED /* MBProgressHUD.framework in Frameworks */,
 				CB09E4C1243B4E28006E19ED /* ResourceX.framework in Frameworks */,
@@ -187,6 +192,7 @@
 		CB09E409243AE7E6006E19ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CBB3F8FF24445001008DE987 /* ResourceCryptor.framework */,
 				CB09E4D2243B595E006E19ED /* AFNetworking.framework */,
 				CB09E4D3243B595E006E19ED /* MBProgressHUD.framework */,
 				CB09E4D1243B595E006E19ED /* YYModel.framework */,
@@ -607,7 +613,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.2.3;
 				OTHER_CFLAGS = "-fembed-bitcode";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Teng.ResourceX;
@@ -636,7 +642,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.2.3;
 				OTHER_CFLAGS = "-fembed-bitcode";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Teng.ResourceX;
