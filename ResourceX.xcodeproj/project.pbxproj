@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		CB09E3E6243AE769006E19ED /* Resource.h in Headers */ = {isa = PBXBuildFile; fileRef = CB09E3E4243AE769006E19ED /* Resource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB09E415243AE839006E19ED /* ResourceX.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E40F243AE838006E19ED /* ResourceX.m */; };
-		CB09E416243AE839006E19ED /* ResourceX.h in Headers */ = {isa = PBXBuildFile; fileRef = CB09E410243AE838006E19ED /* ResourceX.h */; };
-		CB09E418243AE839006E19ED /* ResourceConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = CB09E412243AE839006E19ED /* ResourceConfig.h */; };
+		CB09E416243AE839006E19ED /* ResourceX.h in Headers */ = {isa = PBXBuildFile; fileRef = CB09E410243AE838006E19ED /* ResourceX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB09E418243AE839006E19ED /* ResourceConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = CB09E412243AE839006E19ED /* ResourceConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB09E41A243AE839006E19ED /* ResourceConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E414243AE839006E19ED /* ResourceConfig.m */; };
 		CB09E455243AF87C006E19ED /* ResourceX+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E452243AF259006E19ED /* ResourceX+YYModel.m */; };
 		CB09E4A5243B4D56006E19ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E4A4243B4D56006E19ED /* AppDelegate.m */; };
@@ -30,9 +30,9 @@
 		CB09E4D8243B595E006E19ED /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D3243B595E006E19ED /* MBProgressHUD.framework */; };
 		CB09E4D9243B595E006E19ED /* MBProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D3243B595E006E19ED /* MBProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB278E6D244347A700B98C1F /* ResourceX_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB278E6C244347A700B98C1F /* ResourceX_ExampleTests.m */; };
-		CB278E7624434CC700B98C1F /* NSArray+Filters.h in Headers */ = {isa = PBXBuildFile; fileRef = CB278E7424434CC700B98C1F /* NSArray+Filters.h */; };
+		CB278E7624434CC700B98C1F /* NSArray+Filters.h in Headers */ = {isa = PBXBuildFile; fileRef = CB278E7424434CC700B98C1F /* NSArray+Filters.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB278E7724434CC700B98C1F /* NSArray+Filters.m in Sources */ = {isa = PBXBuildFile; fileRef = CB278E7524434CC700B98C1F /* NSArray+Filters.m */; };
-		CB388DE6243CB85500A5AFB6 /* ResourceConst.h in Headers */ = {isa = PBXBuildFile; fileRef = CB388DE5243CB85500A5AFB6 /* ResourceConst.h */; };
+		CB388DE6243CB85500A5AFB6 /* ResourceConst.h in Headers */ = {isa = PBXBuildFile; fileRef = CB388DE5243CB85500A5AFB6 /* ResourceConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBBC7DD1243C1868007E3FFF /* YYModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D1243B595E006E19ED /* YYModel.framework */; };
 		CBBC7DD2243C1868007E3FFF /* YYModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D1243B595E006E19ED /* YYModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CBBC7DD3243C2457007E3FFF /* ResourceX+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E450243AF259006E19ED /* ResourceX+AFNetworking.m */; };
@@ -613,7 +613,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.4;
+				MARKETING_VERSION = 1.2.5;
 				OTHER_CFLAGS = "-fembed-bitcode";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Teng.ResourceX;
@@ -642,7 +642,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.4;
+				MARKETING_VERSION = 1.2.5;
 				OTHER_CFLAGS = "-fembed-bitcode";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Teng.ResourceX;

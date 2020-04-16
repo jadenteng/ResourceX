@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "ResourceX"
-  spec.version      = "1.2.4"
+  spec.version      = "1.2.5"
   spec.summary      = "ResourceX 通过AFNetworking YYModel 网络封装请求"
   spec.homepage     = "https://github.com/JadenTeng/ResourceX.git"
   spec.license      = "MIT"
