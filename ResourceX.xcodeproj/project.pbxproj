@@ -40,6 +40,8 @@
 		CBBC7DD5243C279F007E3FFF /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D2243B595E006E19ED /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CBD0774E2445AF410030DE39 /* ResourceCryptor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3F8FF24445001008DE987 /* ResourceCryptor.framework */; };
 		CBD0774F2445AF410030DE39 /* ResourceCryptor.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3F8FF24445001008DE987 /* ResourceCryptor.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CBD1C33424484F2F00B0C7B5 /* ResourceX+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = CB09E451243AF259006E19ED /* ResourceX+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBD1C33524484F3400B0C7B5 /* ResourceX+YYModel.h in Headers */ = {isa = PBXBuildFile; fileRef = CB09E44F243AF259006E19ED /* ResourceX+YYModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -275,8 +277,10 @@
 			files = (
 				CB09E418243AE839006E19ED /* ResourceConfig.h in Headers */,
 				CB09E3E6243AE769006E19ED /* Resource.h in Headers */,
+				CBD1C33424484F2F00B0C7B5 /* ResourceX+AFNetworking.h in Headers */,
 				CB388DE6243CB85500A5AFB6 /* ResourceConst.h in Headers */,
 				CB278E7624434CC700B98C1F /* NSArray+Filters.h in Headers */,
+				CBD1C33524484F3400B0C7B5 /* ResourceX+YYModel.h in Headers */,
 				CB09E416243AE839006E19ED /* ResourceX.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
