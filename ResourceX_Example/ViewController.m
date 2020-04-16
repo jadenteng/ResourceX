@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-#import "Resource.h"
+#import "ResourceX.h"
 ///model 相关类
 #import "Episodes.h"
 #import "LoginModel.h"

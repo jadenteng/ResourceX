@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB09E3E6243AE769006E19ED /* Resource.h in Headers */ = {isa = PBXBuildFile; fileRef = CB09E3E4243AE769006E19ED /* Resource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB09E415243AE839006E19ED /* ResourceX.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E40F243AE838006E19ED /* ResourceX.m */; };
-		CB09E416243AE839006E19ED /* ResourceX.h in Headers */ = {isa = PBXBuildFile; fileRef = CB09E410243AE838006E19ED /* ResourceX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB09E416243AE839006E19ED /* Resource.h in Headers */ = {isa = PBXBuildFile; fileRef = CB09E410243AE838006E19ED /* Resource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB09E418243AE839006E19ED /* ResourceConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = CB09E412243AE839006E19ED /* ResourceConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB09E41A243AE839006E19ED /* ResourceConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E414243AE839006E19ED /* ResourceConfig.m */; };
 		CB09E455243AF87C006E19ED /* ResourceX+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E452243AF259006E19ED /* ResourceX+YYModel.m */; };
@@ -33,6 +32,7 @@
 		CB278E7624434CC700B98C1F /* NSArray+Filters.h in Headers */ = {isa = PBXBuildFile; fileRef = CB278E7424434CC700B98C1F /* NSArray+Filters.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB278E7724434CC700B98C1F /* NSArray+Filters.m in Sources */ = {isa = PBXBuildFile; fileRef = CB278E7524434CC700B98C1F /* NSArray+Filters.m */; };
 		CB388DE6243CB85500A5AFB6 /* ResourceConst.h in Headers */ = {isa = PBXBuildFile; fileRef = CB388DE5243CB85500A5AFB6 /* ResourceConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB3AA5C9244853A60027EBB9 /* ResourceX.h in Headers */ = {isa = PBXBuildFile; fileRef = CB09E3E4243AE769006E19ED /* ResourceX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBBC7DD1243C1868007E3FFF /* YYModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D1243B595E006E19ED /* YYModel.framework */; };
 		CBBC7DD2243C1868007E3FFF /* YYModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB09E4D1243B595E006E19ED /* YYModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CBBC7DD3243C2457007E3FFF /* ResourceX+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09E450243AF259006E19ED /* ResourceX+AFNetworking.m */; };
@@ -81,10 +81,10 @@
 
 /* Begin PBXFileReference section */
 		CB09E3E1243AE769006E19ED /* ResourceX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ResourceX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB09E3E4243AE769006E19ED /* Resource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Resource.h; sourceTree = "<group>"; };
+		CB09E3E4243AE769006E19ED /* ResourceX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResourceX.h; sourceTree = "<group>"; };
 		CB09E3E5243AE769006E19ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB09E40F243AE838006E19ED /* ResourceX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceX.m; sourceTree = "<group>"; };
-		CB09E410243AE838006E19ED /* ResourceX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceX.h; sourceTree = "<group>"; };
+		CB09E410243AE838006E19ED /* Resource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Resource.h; sourceTree = "<group>"; };
 		CB09E412243AE839006E19ED /* ResourceConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceConfig.h; sourceTree = "<group>"; };
 		CB09E414243AE839006E19ED /* ResourceConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceConfig.m; sourceTree = "<group>"; };
 		CB09E42F243AECE9006E19ED /* LoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
@@ -179,7 +179,7 @@
 		CB09E3E3243AE769006E19ED /* ResourceX */ = {
 			isa = PBXGroup;
 			children = (
-				CB09E3E4243AE769006E19ED /* Resource.h */,
+				CB09E3E4243AE769006E19ED /* ResourceX.h */,
 				CB09E44E243AF11D006E19ED /* Headers */,
 				CB09E40F243AE838006E19ED /* ResourceX.m */,
 				CB09E414243AE839006E19ED /* ResourceConfig.m */,
@@ -218,7 +218,7 @@
 		CB09E44E243AF11D006E19ED /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				CB09E410243AE838006E19ED /* ResourceX.h */,
+				CB09E410243AE838006E19ED /* Resource.h */,
 				CB388DE5243CB85500A5AFB6 /* ResourceConst.h */,
 				CB09E412243AE839006E19ED /* ResourceConfig.h */,
 				CB09E451243AF259006E19ED /* ResourceX+AFNetworking.h */,
@@ -276,12 +276,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB09E418243AE839006E19ED /* ResourceConfig.h in Headers */,
-				CB09E3E6243AE769006E19ED /* Resource.h in Headers */,
 				CBD1C33424484F2F00B0C7B5 /* ResourceX+AFNetworking.h in Headers */,
 				CB388DE6243CB85500A5AFB6 /* ResourceConst.h in Headers */,
 				CB278E7624434CC700B98C1F /* NSArray+Filters.h in Headers */,
+				CB3AA5C9244853A60027EBB9 /* ResourceX.h in Headers */,
 				CBD1C33524484F3400B0C7B5 /* ResourceX+YYModel.h in Headers */,
-				CB09E416243AE839006E19ED /* ResourceX.h in Headers */,
+				CB09E416243AE839006E19ED /* Resource.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,7 +617,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.5;
+				MARKETING_VERSION = 1.2.7;
 				OTHER_CFLAGS = "-fembed-bitcode";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Teng.ResourceX;
@@ -646,7 +646,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.5;
+				MARKETING_VERSION = 1.2.7;
 				OTHER_CFLAGS = "-fembed-bitcode";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Teng.ResourceX;

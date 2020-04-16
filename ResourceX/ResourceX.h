@@ -6,7 +6,7 @@
 //  Copyright © 2020 Jaden. All rights reserved.
 //
 
-#import "ResourceX.h"
+#import "Resource.h"
 #import "ResourceConfig.h"
 #import "ResourceConst.h"
 #import "NSArray+Filters.h" ///常用数组 操作指令

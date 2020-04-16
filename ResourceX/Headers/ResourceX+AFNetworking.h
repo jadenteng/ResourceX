@@ -6,7 +6,7 @@
 //  Copyright © 2020 Jaden. All rights reserved.
 //
 
-#import "ResourceX.h"
+#import "Resource.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
