@@ -43,6 +43,9 @@
 
 #### *创建ResourceX 设置转换Model 去掉了获取复杂的获取json中逻辑,也去掉了json转为对应的model时处理逻辑*
 ```
+导入ResourceX
+#import <ResourceX/ResourceX.h>
+
 //1. 创建ResourceX by通过key获取 数组ExpModel对象
 ResourceX *netApi = [ResourceX yy_array_url:@"episodes" decoder:ExpModel.class by:@"episodes"];
 

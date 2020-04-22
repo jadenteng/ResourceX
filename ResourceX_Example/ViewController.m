@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
+//导入ResourceX
+#import <ResourceX/ResourceX.h>
 
-#import "ResourceX.h"
 ///model 相关类
 #import "Episodes.h"
 #import "LoginModel.h"
@@ -23,7 +24,9 @@
     [super viewDidLoad];
     
 }
-
+#pragma -mark !!!
+/// 注: 我这里把finishedCallBack代码块实现,是为了方便查看原始请求的数据源与success代码块数据进行对比
+/// success代码块回调的类容只会是根据你指定的规则而转换后的数据(model)
 - (void)initJsonUrl {
     
     ResourceX *netApi = [ResourceX jsonUrl:@"exmple/dict"];
@@ -94,7 +97,7 @@
     } failure:^(id  _Nullable responseObject) {
         
     } finished:^(id  _Nullable responseObject) {
-        
+         NSLog(@"源数据:%@",responseObject);
     }];
 }
 
@@ -107,6 +110,7 @@
         NSLog(@"转换数据:%@",responseObject);
     } failure:^(id  _Nullable responseObject) {
     } finished:^(id  _Nullable responseObject) {
+         NSLog(@"源数据:%@",responseObject);
     }];
 }
 
