@@ -111,9 +111,9 @@
     }];
     //配置获取网络成功 提示HUD
     [ResourceConfig configer_showSuccessHit:^(id  _Nonnull msg, NSInteger tag) {
-        if (tag == 1) {
+      //  if (tag == 1) {
             [MBProgressHUD showAutoHudInWindow:msg];
-        }
+       // }
     }];
     //设置 请求开始 加载HUD
     [ResourceConfig configer_showHUD_Begin:^{
